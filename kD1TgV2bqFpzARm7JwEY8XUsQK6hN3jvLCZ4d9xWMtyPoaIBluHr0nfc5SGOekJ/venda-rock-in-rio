@@ -1,0 +1,1166 @@
+<!doctype html>
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<link rel="icon" sizes="196x196" href="https://cdn.getcrowder.com/images/c1ade2d9-b2d1-484a-b163-0e5509e00144-favicon-32x32.png?w=196">
+		<meta name="Robots" content="INDEX,FOLLOW"/>
+		<link rel="dns-prefetch" href="//api.boletius.com">
+		<meta name="MobileOptimized" content="width">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="HandheldFriendly" content="true">
+
+		
+		<!-- OneTrust  -->
+		<script src=https://cdn.cookielaw.org/scripttemplates/otSDKStub.js  type="text/javascript" charset="UTF-8" data-domain-script="335c8215-96b5-4b4c-91b1-4f1dd9016a7b" ></script>
+		<script type="text/javascript">
+		function OptanonWrapper() {
+			// Get initial OnetrustActiveGroups ids
+			if(typeof OptanonWrapperCount == "undefined"){
+				otGetInitialGrps();
+			}
+			//Delete cookies
+			otDeleteCookie(otIniGrps);
+			// Assign OnetrustActiveGroups to custom variable
+			function otGetInitialGrps(){
+				OptanonWrapperCount = '';
+				otIniGrps =  OnetrustActiveGroups;
+				// console.log("otGetInitialGrps", otIniGrps)
+			}
+			function otDeleteCookie(iniOptGrpId)
+			{
+				var otDomainGrps = JSON.parse(JSON.stringify(Optanon.GetDomainData().Groups));
+				var otDeletedGrpIds = otGetInactiveId(iniOptGrpId, OnetrustActiveGroups);
+				if(otDeletedGrpIds.length != 0 && otDomainGrps.length !=0){
+					for(var i=0; i < otDomainGrps.length; i++){
+						//Check if CustomGroupId matches
+					if(otDomainGrps[i]['CustomGroupId'] != '' && otDeletedGrpIds.includes(otDomainGrps[i]['CustomGroupId'])){
+							for(var j=0; j < otDomainGrps[i]['Cookies'].length; j++){
+								// console.log("otDeleteCookie",otDomainGrps[i]['Cookies'][j]['Name'])
+								//Delete cookie
+								eraseCookie(otDomainGrps[i]['Cookies'][j]['Name']);
+							}
+						}
+						//Check if Hostid matches
+						if(otDomainGrps[i]['Hosts'].length != 0){
+							for(var j=0; j < otDomainGrps[i]['Hosts'].length; j++){
+								//Check if HostId presents in the deleted list and cookie array is not blank
+								if(otDeletedGrpIds.includes(otDomainGrps[i]['Hosts'][j]['HostId']) && otDomainGrps[i]['Hosts'][j]['Cookies'].length !=0){
+									for(var k=0; k < otDomainGrps[i]['Hosts'][j]['Cookies'].length; k++){
+										//Delete cookie
+										eraseCookie(otDomainGrps[i]['Hosts'][j]['Cookies'][k]['Name']);
+									}
+								}
+							}
+						}
+					}
+				}
+				otGetInitialGrps(); //Reassign new group ids
+			}
+			//Get inactive ids
+			function otGetInactiveId(customIniId, otActiveGrp){
+				//Initial OnetrustActiveGroups
+				// console.log("otGetInactiveId",customIniId)
+				customIniId = customIniId.split(",");
+				customIniId = customIniId.filter(Boolean);
+				//After action OnetrustActiveGroups
+				otActiveGrp = otActiveGrp.split(",");
+				otActiveGrp = otActiveGrp.filter(Boolean);
+				var result=[];
+				for (var i=0; i < customIniId.length; i++){
+					if ( otActiveGrp.indexOf(customIniId[i]) <= -1 ){
+						result.push(customIniId[i]);
+					}
+				}
+				return result;
+			}
+			//Delete cookie
+			function eraseCookie(name) {
+				//Delete root path cookies
+				domainName = window.location.hostname.substring(3);
+				document.cookie = name+'=; Max-Age=-99999999; Path=/;Domain='+ domainName;
+				document.cookie = name+'=; Max-Age=-99999999; Path=/;';
+				//Delete LSO incase LSO being used, cna be commented out.
+				localStorage.removeItem(name);
+				//Check for the current path of the page
+				pathArray = window.location.pathname.split('/');
+				//Loop through path hierarchy and delete potential cookies at each path.
+				for (var i=0; i < pathArray.length; i++){
+					if (pathArray[i]){
+						//Build the path string from the Path Array e.g /site/login
+						var currentPath = pathArray.slice(0,i+1).join('/');
+					document.cookie = name+'=; Max-Age=-99999999; Path=' + currentPath + ';Domain='+ domainName;
+						document.cookie = name+'=; Max-Age=-99999999; Path=' + currentPath + ';';
+						//Maybe path has a trailing slash!
+						document.cookie = name+'=; Max-Age=-99999999; Path=' + currentPath + '/;Domain='+ domainName;
+						document.cookie = name+'=; Max-Age=-99999999; Path=' + currentPath + '/;';
+		
+					
+					}
+				}
+			}
+		}
+		</script>
+		<link rel="canonical" href="https://www.ticketmaster.com.br/event/venda-rock-in-rio" />
+			<meta name="twitter:card" content="summary_large_image"/>
+			<meta name="twitter:title" content="Rock in Rio"/>
+			<meta name="twitter:description" content="Rock In Rio"/>
+			<meta name="twitter:img:src" content="https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png"/>
+			<meta name="description" content="Rock In Rio"/>
+			<meta name="keywords" content="entradas,evento,undefined,"/>
+			<meta property="og:image" content="https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png"/>
+			<meta property="og:title" content="Rock in Rio"/>
+			<meta property="og:url" content="https://www.ticketmaster.com.br/event/venda-rock-in-rio"/>
+			<meta property="og:site_name" content="Ticketmaster Brasil"/>
+			<meta property="og:type" content="website"/>
+			<meta property="og:description" content="Rock In Rio"/>
+			<meta property="description" content="Rock In Rio"/>
+			<meta property="fb:app_id" content=""/>
+		<title>Rock in Rio</title>
+		<!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+
+	    <script type="application/ld+json">
+	        {"location":{"address":{"streetAddress":"Av. Salvador Allende","addressLocality":"rio de janeiro","postalCode":"22780-160"},"@type":"Place","name":"Cidade do Rock"},"offers":[{"@type":"Offer","validFrom":null,"price":795,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":397.5,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":675.75,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":795,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":675.75,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":397.5,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":397.5,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":675.75,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":795,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"}],"performer":[],"@context":"http://schema.org/","@type":"Event","name":"Rock in Rio","startDate":"2024-09-21T17:00:00Z","description":"Rock In Rio","image":"https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio","endDate":"2024-09-22T02:00:00Z"}
+	    </script>
+
+		<!-- Source origin data
+				ConfigParams -> WEB
+				Event -> WEB
+	    -->
+	
+		<link href="//cdn.boletius.com/content/css/styles.9868837f62.css" media="screen" rel="stylesheet" type="text/css" />
+		
+			<link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://cdn.boletius.com/fonts/Averta-Regular.woff2">
+<link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://cdn.boletius.com/fonts/Averta-Semibold.woff2">
+<link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://cdn.boletius.com/fonts/Averta-Bold.woff2">
+
+	    <style type="text/css">
+
+			.footer {
+					--footer-bg: #1f262d;
+					--footer-link-color: #ffffff;
+			}
+
+			
+			body {
+					--main-color:#024ddf; 
+					--main-gradient-color-1: #024ddf; 
+  					--main-gradient-color-2: #024ddf; 
+					--header-color: #024ddf;
+			
+
+					font-family: Averta, "Helvetica Neue", Helvetica, Arial, sans-serif;
+				
+			}
+
+				.event_blocks .block:nth-child(even) {
+    background: none !important;
+}
+
+.event-picker .dropdown .dropdown-menu li.agotado div {
+    padding: 15px 20px;
+    clear: both;
+    font-weight: 600;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    border-bottom: solid 1px #d7d7d773;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-wrap: balance;
+    text-decoration: none;
+}
+
+
+#eventList .home-events .col-md-12 { width:100%}
+#eventList .home-events .col-md-8  , #eventList .home-events .col-md-4 { width:50%}
+@media screen and (max-width: 1024px) {#eventList .home-events .col-md-12 { width:100%}}
+.ticket-shop .btn-primary { cursor:pointer !important}
+
+.event_thumb_info .event_venue { display:none}
+
+img.banner-town {
+width: 100%;
+    border-radius: 5px;
+    height: 380px;
+    object-fit: cover;
+}
+.event-thumb .title-container {
+    z-index: 1;
+}
+.va-container:hover img {
+    transform: scale(1.05) !important;
+}
+.event-thumb img {
+    transition: 0.4s;
+}
+
+.title-container { opacity:0; transition:0.3s ease-in-out}
+.title-conttainer .event_thumb_info, .title-container .thumb-title {margin-left: 20px; transition:0.4s ease-in-out}
+
+.va-container:hover .title-container { opacity:1}
+.va-container:hover title-conttainer .event_thumb_info, .va-container:hover .title-container .thumb-title {margin-left: 0px; }
+
+@media screen and (max-width: 768px) {
+img.banner-town {
+    height: 300px;
+}
+}
+@media screen and (max-width: 1024px) {
+.home-events .col-md-8, .home-events .col-md-4 {
+    width: 100% !important;
+}
+}
+
+.title-container {
+    display: flex;
+    padding: 40px;
+    position: absolute;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background: rgb(0,0,0);
+    background: linear-gradient(51deg, rgb(3 95 196) 0%, rgb(0 101 210 / 42%) 100%);
+    flex-direction: column;
+}
+
+.title-container .thumb-title {
+font-size: 1.6em;
+font-weight: 600;
+}
+
+.va-container:hover {
+    transform: scale(1);
+}
+
+.event-thumb {
+    background-color: var(--main-color);
+    box-shadow: none !important;
+}
+
+.event_thumb_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+gap:2px;
+}
+
+.event_thumb_info span.event_venue { opacity:0.6}
+
+
+@media screen and (max-width: 768px) {
+.title-container { text-align:left !important; padding:20px !important;}
+.title-container .thumb-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    line-height: 1.4em;
+    text-align: initial;
+}
+}
+
+.container .content ul {padding:0 0 0 20px !important;}
+.container .content table {width:100%; border:solid 1px #f1f1f1}
+.container .content table td {border:solid 1px #f1f1f1; padding:10px;}
+
+.carousel-inner .item {
+    height: 300px !important;
+}
+
+.carousel-indicators {
+    bottom: 10px !important;
+    opacity: 1;
+}
+
+.carousel-indicators li , .carousel-indicators li.active  {
+    width: 10px ;
+    height: 10px;
+    margin: 0 1px;
+}
+
+
+.search_box_home h1 {
+    text-transform: none;
+}
+
+body {
+     padding-top: 50px;
+     letter-spacing: 0.3px;
+}
+ .footer-tm ul li a {
+     color: #fff;
+     margin: 0 !important;
+}
+ .home-categories , .home-events {
+     width:90%;
+     max-width: 1260px;
+     margin: 0 auto;
+}
+ .home-events .col-md-8, .home-events .col-md-4 {
+     width:50%;
+}
+ @font-face {
+     font-family: "Averta";
+     src: url("https://cdn.boletius.com/fonts/Averta-Light.woff2") format("woff2");
+     font-weight: 300;
+}
+ @font-face {
+     font-family: "Averta";
+     src: url("https://cdn.boletius.com/fonts/Averta-Regular.woff2") format("woff2");
+     font-weight: 400;
+}
+ @font-face {
+     font-family: "Averta";
+     src: url("https://cdn.boletius.com/fonts/Averta-Semibold.woff2") format("woff2");
+     font-weight: 600;
+}
+ @font-face {
+     font-family: "Averta";
+     src: url("https://cdn.boletius.com/fonts/Averta-Bold.woff2") format("woff2");
+     font-weight: 700;
+}
+ @font-face {
+     font-family: "Averta";
+     src: url("https://cdn.boletius.com/fonts/Averta-Black.woff2") format("woff2");
+     font-weight: 900;
+}
+ @font-face {
+     font-family: "Averta";
+     src: url("https://cdn.boletius.com/fonts/Averta-RegularItalic.woff2") format("woff2");
+     font-style: italic;
+}
+ @media (min-width: 780px) {
+     .event-header .ticket-shop #buyButton {
+         margin-left: 30px;
+    }
+}
+ .event-header .ticket-shop {
+     position: relative;
+     background: rgba(251,252,255);
+     border: solid 2px #F1F2F5;
+}
+ .event-header .ticket-shop #show-button, .event-header .ticket-shop #quantity-button {
+     border: solid 1px rgba(0, 0, 0, 0.15);
+}
+ .navbar ul.user-menu {
+     padding: 15px 0 0 0;
+}
+ .navbar-brand {
+     line-height: normal;
+}
+ .event-header .ticket-shop.affix{
+     top: 60px;
+}
+ .main {
+     height: 180px;
+     background: #024DDF !important;
+}
+ .main h1 { display: none;}
+ .navbar .btn {
+     margin-top: 0px;
+     background: transparent;
+     font-size: 1.1em;
+}
+ #login_button #ingresar {
+     color: #353C42 !important;
+}
+ .navbar a {
+     font-size:1em;
+}
+ .navbar .logo {
+     padding: 20px 0;
+}
+ .navbar-menu a:hover {
+     background-color: rgb(230, 230, 230);
+}
+ .navbar-menu a:hover::after {
+     width:0px;
+}
+ @media (min-width: 1600px){
+     .container {
+         width: 1260px;
+    }
+}
+ .footer-tm {
+    color:#ffffff;
+}
+ .footer-tm h5 {
+    font-size:1em;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+ .footer-tm ul {
+     padding:0;
+     margin:0 0 40px 0
+}
+ .footer-tm ul li {
+     list-style:none;
+     display:block;
+     margin-bottom:10px;
+}
+ .footer-tm ul li a {
+     color:#fff
+}
+ .footer-tm img.logo {
+     margin:0 0 40px 0;
+     height:25px
+}
+ .footer-tm .foo-copy {
+     text-align:right;
+     font-size:0.8em;
+}
+ .footer-tm .foo-social a {
+     margin-right:20px
+}
+ .footer {
+    border: none
+}
+ @media (max-width: 768px){
+     .footer-tm .foo-social {
+         margin-bottom:40px
+    }
+     .footer-tm .foo-copy {
+         text-align:left;
+    }
+}
+ #eventList.container {
+     width:100%;
+     padding:0;
+}
+ .tm-main {
+     height: 92vh;
+     background: #024DDF;
+     background-image: url(https://cdn.getcrowder.com/images/1669406310174-null-main-br.jpg);
+     background-size: cover;
+     animation: bgAnimate 15s ease-in-out infinite alternate;
+     overflow:hidden;
+     text-align: center;
+border-top: solid 30px #0262cf;
+}
+ @keyframes bgAnimate {
+     0% {
+         background-position: 2% 0;
+    }
+     100% {
+         background-position: 100% 0;
+    }
+}
+ .tm-main .tm-t {
+     margin-bottom: 10vh;
+}
+ .tm-main .tm-t img {
+     height:35vh;
+     animation: tAnimate 2s ease-in-out;
+}
+ @keyframes tAnimate {
+     0% {
+         transform: scale(2.5);
+         opacity:0;
+    }
+     100% {
+         transform: scale(1);
+         opacity:1;
+    }
+}
+ .tm-main .tm-overlay {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: nowrap;
+     align-content:center ;
+     height: 100%;
+     background: linear-gradient(0deg, rgba(2,108,223,1) 0%, rgb(0 69 145 / 50%) 49%, rgba(2,108,223,0) 100%);
+}
+ .tm-main h2 {
+     margin: 0;
+     font-size: 2em;
+     color: #fff;
+     font-weight: 400;
+     animation: h2Animate 1s ease-in-out;
+}
+ .tm-main h2 span {
+     color: #00FFFF;
+}
+ @keyframes h2Animate {
+     0% {
+         transform: scale(0.5);
+         opacity:0;
+    }
+     100% {
+         transform: scale(1);
+         opacity:1;
+    }
+}
+ .tm-main i {
+     display: block;
+     width: 14px;
+     height: 14px;
+     border: solid 2px #ffffff70;
+     border-left: none;
+     border-top: none;
+     transform: rotate(45deg);
+     border-radius: 3px;
+     bottom: 8vh;
+     position: absolute;
+}
+ .tm-suscribe {
+     background: #024DDF;
+     padding: 80px 20px 100px;
+     text-align: center;
+}
+ .tm-suscribe h2 {
+     margin: 0;
+     font-size: 1.8em;
+     color: #fff;
+     font-weight: 400;
+}
+ .tm-social {
+     display: block;
+     position: relative;
+     height: 300px;
+     color: #fff;
+     text-decoration: none;
+}
+ .tm-social .tm-s {
+     width: 100%;
+     position: relative;
+     float: left;
+     height: 300px;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     text-align: center;
+     background: #000;
+}
+ .tm-social .tm-s h3 {
+     font-size:1.8em;
+     color: #fff;
+     margin: 0 0 10px 0;
+     font-weight: normal;
+}
+ .tm-social .tm-s {
+     color: #fff;
+     text-decoration: none;
+     opacity: 0.95;
+     transition: 0.2s;
+}
+ .tm-social .tm-s:hover{
+     opacity:1;
+}
+ .tm-social .tm-s span {
+     color: #00FFFF;
+}
+.tm-social .tm-instagram {
+background: url(https://cdn.getcrowder.com/images/1683576764155-null-TM_Banner_Instagram.jpeg) no-repeat center center;
+background-size: cover;
+}
+.tm-social .tm-facebook {
+background: url(https://cdn.getcrowder.com/images/1683576746022-null-TM_Banner_Facebook.jpg) no-repeat center center;
+background-size: cover;
+}
+.tm-social .tm-linkedin {
+background: url(https://cdn.getcrowder.com/images/1683576712789-null-TM_Banner_LinkedIn.jpg) no-repeat center center;
+background-size: cover;
+}
+.tm-social .tm-twitter{
+background: url(https://cdn.getcrowder.com/images/1669823412469-null-twitter.jpg) no-repeat center center;
+background-size: cover;
+}
+.tm-social .tm-blog{
+background: url(https://cdn.getcrowder.com/images/1683576726535-null-TM_Banner_Blog.jpg) no-repeat center center;
+background-size: cover;
+}
+.tm-social .tm-tiktok {
+background: url(https://cdn.getcrowder.com/images/1691588419752-null-tiktok.jpeg) no-repeat center center;
+background-size: cover;
+}
+
+.tm-social .tm-overlay img {
+width:40px;
+}
+
+ .tm-business {
+     background:#1F262D;
+     padding: 100px 20px;
+     text-align: center;
+     border-bottom: solid 1px #363636;
+}
+ .tm-business h2 {
+     margin: 0;
+     font-size: 1.8em;
+     color: #fff;
+     font-weight: 400;
+     margin: 0 0 60px 0;
+}
+ .tm-business a {
+     border: solid 1px #fff;
+     text-decoration: none;
+     padding: 18px 30px;
+     font-size:1.1em;
+     color: #fff;
+}
+ @media (max-width: 768px){
+     .tm-main {
+         height: 70vh;
+         background-image: url(https://cdn.getcrowder.com/images/1669406540752-null-main-m.jpg);
+         animation: bgAnimate 25s ease-in infinite alternate;
+    }
+     .tm-main .tm-overlay {
+         padding: 0 30px;
+         background: linear-gradient(0deg, #024DDF 0%, #024DDFb0 49%, #024DDF94 100%);
+    }
+     .tm-main .tm-t img {
+         height:150px;
+    }
+     .tm-social {
+         display: block;
+         position: relative;
+         height: 300px;
+    }
+}
+ .navbar {
+     height: 60px;
+     background-color:#024DDF;
+     box-shadow: none !important;
+}
+ .navbar img.logo {
+     filter: grayscale(1) brightness(5);
+}
+ .navbar-menu a {
+     color: #fff;
+     font-size: 1.1em !important;
+}
+ .navbar-menu a:hover {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.176));
+     background-color: #0000 !important;
+}
+ #login_button #ingresar {
+     color: #fff !important;
+}
+ a.btn-togle span {
+     background:#fff;
+}
+ .navbar a {
+     font-size: 1em;
+}
+ .navbar-collapse ul li:first-child a {
+     border-top:none !important
+}
+ .quentro-modal .modal-body {
+    padding: 20px !important;
+}
+ .quentro-modal .modal-header a.quentro-logo img {
+    width: 120px;
+}
+ .quentro-modal .modal-body img {
+    width: 80px !important;
+}
+ .quentro-modal .close-quentro-modal {
+    width: 25px;
+     float: right !important;
+}
+ #ot-sdk-btn.ot-sdk-show-settings.cookie-settings-btn {
+     color: white;
+     padding: 0;
+     border: 0;
+     font-size:0.9em;
+}
+ #ot-sdk-btn.ot-sdk-show-settings.cookie-settings-btn:hover {
+     color: white;
+     background: none;
+}
+ .tm-grid {
+}
+ .tm-grid .tm-grid-event {
+     color: #fff;
+     background-size: cover;
+     background-position: center ;
+     height: 100%;
+}
+ .tm-grid .tm-grid-event .tm-grid-event-overlay {
+    background: linear-gradient(90deg, rgba(6,25,46,0.95) 0%, rgba(8,30,54,0.65) 40%, rgba(13,32,52,0.15) 100%);
+     height: 100%;
+     display: flex;
+     align-items: flex-end
+}
+ .tm-grid .event-title {
+     font-size:2em;
+     font-weight: 600;
+}
+ .tm-grid .event-info {
+     font-size:1em;
+     margin-bottom: 20px;
+     font-weight:600
+}
+ .tm-grid .event-info span {
+     opacity: 0.7;
+     display: block;
+     font-size:1em;
+     font-weight: normal;
+}
+ .tm-grid a.btn-event {
+     font-size:1.1em;
+     color: #fff;
+     font-weight: 500;
+     background: var(--main-color);
+     padding: 12px 20px;
+     text-decoration: none;
+     display: inline-block;
+     border-radius:2px
+}
+ .tm-grid .event-info-content {
+     padding: 70px;
+}
+
+
+.grid-1 { grid-area: 1 / 1 / 2 / 3; }
+.grid-2 { grid-area: 2 / 1 / 3 / 2; }
+.grid-3 { grid-area: 2 / 2 / 3 / 3; }
+.grid-4 { grid-area: 3 / 1 / 4 / 2; }
+.grid-5 { grid-area: 3 / 2 / 4 / 3; }
+.grid-6 { grid-area: 4 / 1 / 5 / 3; }
+.grid-1 , .grid-2 , .grid-3, .grid-4 , .grid-5, .grid-6, .grid-7, .grid-8 { height: 60vh; }
+
+.grid-1 { width:50%; position: relative;float: left;}
+.grid-2 { width:100% ; position: relative;float: left;}
+
+.grid-1, .grid-2 {
+    height: 55vh;
+    min-height: 400px;
+}
+ 
+ @media (max-width: 1440px){
+     .tm-grid .event-title {
+         font-size: 1.6em;
+    }
+     .tm-grid .event-info {
+         font-size: 1em;
+    }
+     .tm-grid .event-info-content {
+         padding: 4em;
+    }
+     .tm-grid a.btn-event {
+         font-size: 1em;
+        padding: 10px 15px;
+    }
+}
+ @media (max-width: 768px){
+
+     .parent-grid {
+        display: flex;
+        flex-direction: column;
+         height: auto;
+    }
+
+    .grid-1 , .grid-2 , .grid-3, .grid-4 , .grid-5, .grid-6, .grid-7, .grid-8 { height: 50vh; }
+
+
+     .tm-grid .event-info-content {
+         padding:30px 20px;
+    }
+     .tm-grid .event-info span {
+         margin: 0;
+         display: block;
+    }
+}
+ body {
+     --order-top-bg: #0046cb;
+     --order-top-color: #fff;
+     --header-height: 60px;
+     padding-top:60px;
+}
+ .pg_content .pg_sidebar {
+     display:none !important
+}
+ .pg_content .col-sm-8 {
+     margin: 0px auto;
+     width:100%;
+     padding: 0 200px;
+     float: inherit;
+}
+ @media (max-width: 1280px){
+    .pg_content .col-sm-8 {
+        padding: 0px 100px;
+    }
+ }
+ 
+ @media (max-width: 768px){
+    .pg_content .col-sm-8 {
+        padding: 0px 20px;
+    }
+    .grid-1, .grid-2 {
+        height: 40vh;
+        width: 100%;
+        min-height: 350px;
+    }
+}
+
+	    </style>
+
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script type="text/javascript" class="optanon-category-C0002">
+			window.dataLayer = window.dataLayer || [];
+			function gtagV2(value){dataLayer.push(value);}
+			function gtag(){dataLayer.push(arguments);}
+		</script>
+
+
+
+		<!-- Google Tag Manager -->
+		<script  type="text/plain"  class="optanon-category-C0004">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WBGSPNM');</script>
+		<!-- End Google Tag Manager -->
+
+
+		<style>
+		</style>
+	</head>
+	<!-- <body class="" id="Event"> -->
+
+
+	<body class="  accesible" id="Event" >
+
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script  type="text/plain"  async src='https://www.googletagmanager.com/gtag/js?id=UA-24877590-59' class="optanon-category-C0002"></script>
+			<script  type="text/plain"  class="optanon-category-C0002">
+				gtag('js', new Date());
+				gtag('config', 'UA-24877590-59');
+			</script>
+
+		<div id="page-loader" class="loader_process" style="display:none">
+			<div class="loader-ring"><div></div><div></div><div></div><div></div></div>
+		    <h2>Aguarde um momento</h2>
+		    <p id="loader_message"></p>
+		</div>
+		<!-- HEADER -->
+		<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- HEADER -->
+
+		<div data-view="header/header_view"><!-- HEADER  -->
+  <div class='accesibility'>
+    <a title='Diminuir' aria-label='Diminuir' id='decreaseFontSize'>A-</a>
+    <a title='Aumentar' aria-label='Aumentar' id='increaseFontSize'>A+</a>
+  </div>
+<nav class='navbar navbar-fixed-top' role='navigation'>
+  <div class='horizontal-container navbar-container'>
+    <div class='horizontal-container'>
+      <a class='' style='height:100%' href='../../'>
+        <img
+          class='logo logo-dark'
+          style='height:100%'
+          src='https://cdn.getcrowder.com/images/1664925447950-null-ticketmaster-logo-azurewithoutr.png?w=300'
+          alt='Ticketmaster Brasil'
+          title='Ticketmaster Brasil'
+        />
+
+        <img
+          class='logo logo-light'
+          style='height:100%'
+          src='?w=300'
+          alt='Ticketmaster Brasil'
+          title='Ticketmaster Brasil'
+        />
+      </a>
+
+
+    </div>
+
+    <div id='user_data' class='hidden-xs' style='flex-shrink:0; height:100%;display:flex'>
+      <div id='login_button' class='hidden-xs' style='display: flex; align-items:center'></div>
+    </div>
+
+    <div id='user_data' class='visible-xs'>
+      <a class='btn btn-togle visible-xs' data-toggle='collapse' data-target='#navy-collapse'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+  </div>
+
+  <div class='collapse navbar-collapse' id='navy-collapse'>
+    <div class='visible-xs' id='user_data_mobile'>
+    </div>
+  </div>
+</nav></div>
+		<div id="userLogin">
+		</div>
+
+	
+		<!-- FIN HEADER -->
+		<div id="container">
+			<div data-view="event/event" data-fetch_summary="{&quot;model&quot;:{&quot;model&quot;:&quot;Event&quot;,&quot;id&quot;:&quot;5149&quot;}}">
+
+<div class="main_content event_5149 channel_21649">
+
+
+		<div class="event_container">
+			<div id="order_bar_container" class="order-top" style="display:none;"></div>
+			<div id="notification_modal"> </div>
+			<div id="detail_container" class="detail-container">
+				<div id="event_content" >
+						<div id="event_header" class="event-header" >
+							<div id="eventCover">
+								<img class="hidden-xs" src="https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png" alt="Rock in Rio" width="100%">
+								<img class="visible-xs" src="https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png" alt="Rock in Rio" width="100%">
+							</div>
+							
+						</div>
+						<div id="sentinel"></div>
+						<div id="picker"></div>
+						<div class="container">
+							<div class="row pg_content">
+								<div class="col-sm-4 col-xs-12 pg_sidebar pull-right">
+								</div>
+								<div class="col-sm-8 col-xs-12">
+									<div class="row event_info">
+										<p>Data 13, 14, 15, 19, 20, 21 e 22 de Setembro de 2024</p>
+
+<p><span style="color:#222222">Abertura de Portas: 14H</span></p>
+
+<p><span style="color:#222222">Hor&aacute;rio Limite Entrada no Evento: 00H</span></p>
+
+<p>Local: Cidade do Rock</p>
+
+<p><span style="color:#222222">Rio de Janeiro - RJ</span></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Sobre o Rock in Rio 2024&nbsp;&nbsp;</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p>1984 marca o in&iacute;cio das prepara&ccedil;&otilde;es para a primeira edi&ccedil;&atilde;o do evento idealizado por Roberto Medina e que hoje, 40 anos depois, &eacute; considerado o maior festival de m&uacute;sica e entretenimento do mundo &ndash; o Rock in Rio. Originalmente organizado no Rio de Janeiro, o festival ganhou o mundo chegando a Lisboa (Portugal), onde &eacute; realizado at&eacute; hoje, passando por Madrid (Espanha) e Las Vegas (USA).&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p>Desde a primeira edi&ccedil;&atilde;o, j&aacute; gerou 265 mil empregos diretos e indiretos e, apenas na &uacute;ltima, em 2022, um impacto econ&ocirc;mico de mais de 2 bilh&otilde;es na cidade do Rio de Janeiro. Tamb&eacute;m no ano passado, o Rock in Rio foi considerado patrim&ocirc;nio cultural imaterial do estado do Rio de Janeiro. Pelas Cidades do Rock, desde 1985, j&aacute; passaram mais de 11.2 milh&otilde;es de visitantes, que assistiram a 3.816 artistas em 130 dias de magia.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>Gerando impactos positivos nos pa&iacute;ses onde &eacute; realizado e consciente do poder disseminador da marca, o Rock in Rio &eacute; um evento com o prop&oacute;sito de construir um mundo melhor para pessoas mais felizes, confiantes e emp&aacute;ticas num planeta mais saud&aacute;vel. Adotando e incentivando pr&aacute;ticas que apoiam o coletivo, se une a empresas que possuem este mesmo olhar e diretriz.</p>
+
+<p>O ano de 2024 ser&aacute; de muitas comemora&ccedil;&otilde;es para o Rock in Rio. O ano em que tudo come&ccedil;ou, 40 anos depois, d&aacute; in&iacute;cio &agrave;s celebra&ccedil;&otilde;es. E a festa brasileira j&aacute; est&aacute; marcada: 13, 14, 15, 19, 20, 21 e 22 de setembro de 2024, no Parque Ol&iacute;mpico, Rio de Janeiro. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Pontos de venda:</strong></p>
+
+<p>Venda exclusivamente online pelo site Ticketmaster.com.br.</p>
+
+<p>Nesta venda voc&ecirc; poder&aacute; adquirir at&eacute; 04 ( quatro) ingressos por dia de festival por CPF, sendo no m&aacute;ximo 01(uma) meia entrada por dia. M&aacute;ximo de 28 (vinte e oito) ingressos por CPF. &nbsp;<strong>&nbsp; &nbsp;</strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Clientes Ita&uacute;</strong></p>
+
+<table width="1429">
+	<tbody>
+		<tr height="21">
+			<td colspan="10" height="63" rowspan="3" width="1429">Clientes Ita&uacute; que efetuarem a compra com cart&otilde;es de cr&eacute;dito Ita&uacute;, Credicard e Iti. possuem desconto de 15% e parcelamento em at&eacute; 8x sem juros. As condi&ccedil;&otilde;es promocionais s&atilde;o v&aacute;lidas para aquisi&ccedil;&atilde;o de at&eacute; 04 (quatro) ingressoss por dia de festival , por cpf, sendo at&eacute; 01 (uma) meia entrada por dia. Este desconto n&atilde;o &eacute; cumulativo com outros descontos e n&atilde;o &eacute; v&aacute;lido para compra de meia-entrada garantida por lei: estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro, jovens de baixa renda e&nbsp;garis da Companhia Municipal de Limpeza Urbana.&nbsp;&nbsp; &nbsp;&nbsp;</td>
+		</tr>
+		<tr height="21">
+		</tr>
+		<tr height="21">
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;&nbsp;&nbsp; &nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Formas de Pagamento</strong></p>
+
+<p>Cart&atilde;o de Cr&eacute;dito ou PIX.</p>
+
+<p>Clientes que efetuarem o pagamento com os cart&otilde;es de cr&eacute;dito Ita&uacute;,&nbsp;Credicard e Iti t&ecirc;m 15% de desconto na compra de ingressos (n&atilde;o cumulativos com a meia-entrada) e poder&atilde;o parcelar sua compra em at&eacute; 8x sem juros. Nos demais cart&otilde;es aceitos, o pagamento poder&aacute; ser feito em at&eacute; 6x sem juros. Exce&ccedil;&atilde;o para cart&otilde;es internacionais que n&atilde;o possuem parcelamento.</p>
+
+<p>N&atilde;o s&atilde;o aceitos cart&otilde;es de cr&eacute;dito empresariais ou corporativos.</p>
+
+<p>Para pagamento com PIX, basta utilizar o QR Code apresentado na tela final do processo de compra e realizar o pagamento. O prazo para efetuar a compra s&atilde;o 10 minutos ap&oacute;s a gera&ccedil;&atilde;o do c&oacute;digo para pagamento. Os ingressos estar&atilde;o garantidos e dispon&iacute;veis apenas ap&oacute;s a confirma&ccedil;&atilde;o do pagamento. Para mais detalhes sobre transa&ccedil;&otilde;es com PIX <a href="https://help.ticketmaster.com.br/hc/pt-br/sections/10520684009105-Pagamento-com-PIX">clique aqui</a>.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Classifica&ccedil;&atilde;o Et&aacute;ria</strong></p>
+
+<p>A classifica&ccedil;&atilde;o et&aacute;ria do evento &eacute; 16 (dezesseis) anos. A entrada de menores de 16 (dezesseis) anos ser&aacute; permitida desde que estejam acompanhados dos pais ou respons&aacute;veis legais.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Ingressos para PcD</strong></p>
+
+<p>Durante o processo de compra, selecione seus ingressos de meia-entrada, clique em &ldquo;Continuar&rdquo; para ser redirecionado para a pr&oacute;xima etapa onde deve informar os tipos de meia-entrada que deseja. Ao escolher a categoria &ldquo;Pessoas com Defici&ecirc;ncia&rdquo;, voc&ecirc; dever&aacute; fornecer os dados do benefici&aacute;rio e poder&aacute; adicionar um ingresso para acompanhante + os dados desta pessoa.</p>
+
+<p>Os valores dos ingressos do tipo meia entrada ser&atilde;o apresentados e voc&ecirc; poder&aacute; avan&ccedil;ar com a conclus&atilde;o do pagamento. &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</p>
+
+<p>Recomendamos que a compra dos ingressos para a Pessoa com Defici&ecirc;ncia e seu acompanhante sejam realizados no mesmo momento e em mesmo pedido, garantindo que permane&ccedil;am juntos no setor durante toda a apresenta&ccedil;&atilde;o.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Outras informa&ccedil;&otilde;es</strong></p>
+
+<p><strong>Mais informa&ccedil;&otilde;es, alvar&aacute; e Termos&amp;Condi&ccedil;&otilde;es na &iacute;ntegra, acesse <a href="https://rockinrio.com/rio/pt-br/termos-e-condicoes/">rockinrio.com/rio/pt-br/termos-e-condicoes/</a>.</strong></p>
+
+<p>Se voc&ecirc; precisar de informa&ccedil;&otilde;es sobre meia-entrada, acesse&nbsp;<a href="https://help.ticketmaster.com.br/hc/pt-br/categories/10492275749137-Meia-entrada-e-Crian%C3%A7as">https://help.ticketmaster.com.br/hc/pt-br/categories/10492275749137-Meia-entrada-e-Crian%C3%A7as</a></p>
+
+<p>&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<br />
+Para aux&iacute;lio sobre perfil/cadastro, acesse <a href="https://help.ticketmaster.com.br/hc/pt-br/categories/10495161322513-Sobre-cadastros">https://help.ticketmaster.com.br/hc/pt-br/categories/10495161322513-Sobre-cadastros</a></p>
+
+<p><br />
+As informa&ccedil;&otilde;es sobre o processo de compra, acesse&nbsp;<a href="https://help.ticketmaster.com.br/hc/pt-br/categories/10495257925521-Processo-de-compra">https://help.ticketmaster.com.br/hc/pt-br/categories/10495257925521-Processo-de-compra</a></p>
+
+<p>&nbsp;</p>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+      </div>
+	  				<div class='cart' id="checkoutCart" style="display: none;">
+					<div class='checkout-process'>
+						<div class='checkout-actions' id="checkout-actions" > </div>
+						<div class='checkout-resume' id="checkout-resume" style="display:none;">
+						</div>
+					</div>
+					<div class="cart_ads">
+          			</div>
+        		</div>
+    </div>
+    </div>
+</div>
+
+<div data-view="event/no_payments_available" data-fetch_summary="{&quot;model&quot;:{&quot;model&quot;:&quot;Event&quot;,&quot;id&quot;:&quot;5149&quot;}}"><div class="modal modal_new in" id="modalNoPaymentsAvailable" tabindex="-1" role="dialog" aria-hidden="false"
+     data-backdrop="static" data-keyboard="false" style="display: none;">
+  <div class="modal_dialog">
+    <div class="modal_content">
+      <div class="modal_header">
+        <div class="title_header">
+          <span id="modalLimitRate_title">
+            Sem meios de pagamento para 
+          </span>
+        </div>
+      </div>
+      <div class="modal_body">
+        <p id="modalLimitRate_body">
+          Não há métodos de pagamento disponíveis em seu país de residência
+        </p>
+      </div>
+      <div class="modal_footer">
+        <a class="btn btn-primary" id="closeScopePayment">
+          OK
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+		</div>
+
+
+		<div id="process_notification" class="process_alert animated flipInX" style="display:none"></div>
+
+		<div class="footer" style="display:block;">
+		  	<div class="container">
+		    <div class="row">
+                    <div class="footer-tm text-left">
+<div class="row">
+<div class="col-xs-12 col-sm-4">
+<h5>Acesso R&aacute;pido</h5>
+
+<ul>
+	<li><a href="../account/purchases">Minhas Compras</a></li>
+	<li><a href="../account/perfil">Meu Perfil</a></li>
+	<li><a href="https://help.ticketmaster.com.br/hc/pt-br" target="_blank">Suporte ao F&atilde;</a></li>
+	<li><a href="https://www.ticketmaster.com.br/static/acessibilidade" target="_blank">Acessibilidade</a></li>
+</ul>
+</div>
+
+<div class="col-xs-12 col-sm-4">
+<h5>Termos e Pol&iacute;ticas</h5>
+
+<ul>
+	<li><a href="../static/termos-de-uso" target="_blank">Termos de Uso</a></li>
+	<li><a href="../static/politica-de-compra" target="_blank">Pol&iacute;tica de Compra</a></li>
+	<li><a href="https://privacy.ticketmaster.com.br/pt/cookie-policy" target="_blank">Pol&iacute;tica de Cookies</a></li>
+	<li><a href="https://privacy.ticketmaster.com.br/pt/privacy-policy" target="_blank">Pol&iacute;tica de Privacidade</a></li>
+</ul>
+</div>
+
+<div class="col-xs-12 col-sm-4">
+<h5>Sobre a Ticketmaster</h5>
+
+<ul>
+	<li><a href="https://business.ticketmaster.com.br/pt/" target="_blank">Ticketmaster Brasil</a></li>
+	<li><a href="https://business.ticketmaster.com.br/pt/nossa-historia/" target="_blank">Ticketmaster Internacional</a></li>
+	<li><a href="https://www.linkedin.com/company/ticketmasterBR" target="_blank">Trabalhe com a gente</a></li>
+	<li><a href="https://www.ticketmaster.com.br/static/programadeestagio" target="_blank">Programa de Est&aacute;gio</a></li>
+</ul>
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-12"><img alt="Ticketmaster" class="logo" src="https://cdn.boletius.com/ticketmaster/ticketmaster-logo_white.png" /></div>
+</div>
+
+<div class="row">
+<div class="col-xs-12 col-sm-6 foo-social"><a href="https://www.instagram.com/ticketmasterBR/" target="_blank"><img alt="Instagram" src="https://cdn.boletius.com/images/1643379600508-instagram.png" style="height: 16px;" /></a> <a href="https://www.facebook.com/ticketmasterbr" target="_blank"><img alt="
+facebook" src="https://cdn.boletius.com/images/1643379516372-facebook.png" style="height: 16px;" /></a> <a href="https://www.linkedin.com/company/ticketmasterBR" target="_blank"><img alt="Linkedin" src="https://cdn.boletius.com/images/1643379625842-linkedin.png" style="height: 16px;" /></a><a href="https://www.tiktok.com/@ticketmasterbr" target="_blank"><img alt="Linkedin" src="https://cdn.getcrowder.com/images/1691588331940-null-l-tiktok.png" style="height: 16px;" /></a><a href="https://blog.ticketmaster.com.br" target="_blank"><img alt="Linkedin" src="https://cdn.getcrowder.com/images/1683574125568-null-blog.png" style="height: 16px;" /></a></div>
+
+<div class="col-xs-12 col-sm-6 foo-copy"><a class="ot-sdk-show-settings cookie-settings-btn" id="ot-sdk-btn">Defini&ccedil;&otilde;es de Cookies&nbsp;&nbsp;</a>&copy; 2023&nbsp;Ticketmaster.</div>
+</div>
+</div>
+          </div>
+			</div>
+		</div>
+		<div class="footer-crowder">
+			<div class="crowder-logo">
+			</div>
+			
+			<div class="lang-select">
+				<span>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.531 14.531">
+			<path id="Trazado_4" data-name="Trazado 4" d="M16.531,9.766a6.766,6.766,0,0,1-6.766,6.766m6.766-6.766A6.766,6.766,0,0,0,9.766,3m6.766,6.766H3m6.766,6.766A6.766,6.766,0,0,1,3,9.766m6.766,6.766c1.246,0,2.255-3.029,2.255-6.766S11.011,3,9.766,3m0,13.531C8.52,16.531,7.51,13.5,7.51,9.766S8.52,3,9.766,3M3,9.766A6.766,6.766,0,0,1,9.766,3" transform="translate(-2.5 -2.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+					</svg>
+				</span>
+				<a id="es" class="lang">Español</a>
+				<a id="en" class="lang " >English</a>
+				<a id="pt" class="lang ">Português</a>
+			</div>
+		</div>
+
+		<script src="//cdn.boletius.com/content/js/mergedAssets.cb6828ae9e.js"></script>
+		<script src="//cdn.boletius.com/content/js/jquery.card.2c99222852.js"></script>
+		<script src="//cdn.boletius.com/content/js/md5.983f472ede.js"></script>
+		<script src="//cdn.boletius.com/content/js/bootstrap-dialog.min.d31cd3b133.js"></script>
+		<script src="//cdn.boletius.com/content/js/libphonenumber-js.min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js?onload=captchaLoadedCallback&render=explicit'></script>
+		<script src="//cdn.boletius.com/content/js/jquery.maskedinput.min.240c61253d.js"></script>
+
+
+		<script>
+			(function() {
+				 var App = window.App = new (require('app/app'))({"apiPath":"/api","loading":false,"templateAdapter":"rendr-handlebars","hostname":"www.ticketmaster.com.br","sources":[{"model":"ConfigParams","source":"WEB"},{"model":"Event","source":"WEB"}],"configParams":{"url":"www.ticketmaster.com.br","configurationUrl":"https://web-layout.s3.amazonaws.com/home/production/3f819e19-7a5c-46b5-9d1e-78e090392c03","country":"BRASIL","cashlessURL":null,"logoClear":"","analytics":{"facebook":{"pixelId":null},"mixpanel":{"id":null},"google":{"analyticsId":"UA-24877590-59","gtmId":"GTM-WBGSPNM"}},"enableAccessibility":true,"countryData":{"streetTypes":[],"country":"BRASIL","defaultCurrency":"BRL"},"logo":"https://cdn.getcrowder.com/images/1664925447950-null-ticketmaster-logo-azurewithoutr.png","id":62,"showCaptchaOnRegister":true,"oneTrustId":"335c8215-96b5-4b4c-91b1-4f1dd9016a7b","homepageImage":"https://cdn.getcrowder.com/images/dd6080af-451e-47da-ac7f-dc0ec704b9d1-ticketmasterbr.png","useHomeCMS":true,"refundServiceEnabled":true,"sitefEnabled":true,"comboName":"Pacote","featurePaymentVerification":true,"timeZone":"America/Sao_Paulo","usePagesCMS":true,"homeLogo":"","shopUrl":"www.ticketmaster.com.br","useLandingComponents":true,"showCaptchaOnLogin":true,"featureDeferred":true,"subtitle":"Ticketmaster","featureStreaming":false,"name":"Ticketmaster Brasil","posInfo":null,"styles":{"colors":{"main":"#024ddf","header":"#024ddf","headerLinks":"#024ddf","footer":"#1f262d","footerLinks":"#ffffff"},"font":{"source":"<link rel=\"preload\" as=\"font\" crossorigin=\"anonymous\" type=\"font/woff2\" href=\"https://cdn.boletius.com/fonts/Averta-Regular.woff2\">\n<link rel=\"preload\" as=\"font\" crossorigin=\"anonymous\" type=\"font/woff2\" href=\"https://cdn.boletius.com/fonts/Averta-Semibold.woff2\">\n<link rel=\"preload\" as=\"font\" crossorigin=\"anonymous\" type=\"font/woff2\" href=\"https://cdn.boletius.com/fonts/Averta-Bold.woff2\">","fontFamily":"Averta, \"Helvetica Neue\", Helvetica, Arial, sans-serif"},"custom":".event_blocks .block:nth-child(even) {\n    background: none !important;\n}\n\n.event-picker .dropdown .dropdown-menu li.agotado div {\n    padding: 15px 20px;\n    clear: both;\n    font-weight: 600;\n    line-height: 1.42857143;\n    color: #333;\n    white-space: nowrap;\n    border-bottom: solid 1px #d7d7d773;\n    display: flex !important;\n    align-items: center;\n    justify-content: space-between;\n    gap: 10px;\n    text-wrap: balance;\n    text-decoration: none;\n}\n\n\n#eventList .home-events .col-md-12 { width:100%}\n#eventList .home-events .col-md-8  , #eventList .home-events .col-md-4 { width:50%}\n@media screen and (max-width: 1024px) {#eventList .home-events .col-md-12 { width:100%}}\n.ticket-shop .btn-primary { cursor:pointer !important}\n\n.event_thumb_info .event_venue { display:none}\n\nimg.banner-town {\nwidth: 100%;\n    border-radius: 5px;\n    height: 380px;\n    object-fit: cover;\n}\n.event-thumb .title-container {\n    z-index: 1;\n}\n.va-container:hover img {\n    transform: scale(1.05) !important;\n}\n.event-thumb img {\n    transition: 0.4s;\n}\n\n.title-container { opacity:0; transition:0.3s ease-in-out}\n.title-conttainer .event_thumb_info, .title-container .thumb-title {margin-left: 20px; transition:0.4s ease-in-out}\n\n.va-container:hover .title-container { opacity:1}\n.va-container:hover title-conttainer .event_thumb_info, .va-container:hover .title-container .thumb-title {margin-left: 0px; }\n\n@media screen and (max-width: 768px) {\nimg.banner-town {\n    height: 300px;\n}\n}\n@media screen and (max-width: 1024px) {\n.home-events .col-md-8, .home-events .col-md-4 {\n    width: 100% !important;\n}\n}\n\n.title-container {\n    display: flex;\n    padding: 40px;\n    position: absolute;\n    width: 100%;\n    align-items: flex-start;\n    justify-content: flex-end;\n    background: rgb(0,0,0);\n    background: linear-gradient(51deg, rgb(3 95 196) 0%, rgb(0 101 210 / 42%) 100%);\n    flex-direction: column;\n}\n\n.title-container .thumb-title {\nfont-size: 1.6em;\nfont-weight: 600;\n}\n\n.va-container:hover {\n    transform: scale(1);\n}\n\n.event-thumb {\n    background-color: var(--main-color);\n    box-shadow: none !important;\n}\n\n.event_thumb_info {\n    display: flex;\n    flex-direction: column;\n    align-items: flex-start;\n    color: #fff;\n    font-size: 1em;\n    font-weight: 500;\ngap:2px;\n}\n\n.event_thumb_info span.event_venue { opacity:0.6}\n\n\n@media screen and (max-width: 768px) {\n.title-container { text-align:left !important; padding:20px !important;}\n.title-container .thumb-title {\n    font-size: 1.3em;\n    font-weight: 600;\n    margin: 0 0 10px 0;\n    line-height: 1.4em;\n    text-align: initial;\n}\n}\n\n.container .content ul {padding:0 0 0 20px !important;}\n.container .content table {width:100%; border:solid 1px #f1f1f1}\n.container .content table td {border:solid 1px #f1f1f1; padding:10px;}\n\n.carousel-inner .item {\n    height: 300px !important;\n}\n\n.carousel-indicators {\n    bottom: 10px !important;\n    opacity: 1;\n}\n\n.carousel-indicators li , .carousel-indicators li.active  {\n    width: 10px ;\n    height: 10px;\n    margin: 0 1px;\n}\n\n\n.search_box_home h1 {\n    text-transform: none;\n}\n\nbody {\n     padding-top: 50px;\n     letter-spacing: 0.3px;\n}\n .footer-tm ul li a {\n     color: #fff;\n     margin: 0 !important;\n}\n .home-categories , .home-events {\n     width:90%;\n     max-width: 1260px;\n     margin: 0 auto;\n}\n .home-events .col-md-8, .home-events .col-md-4 {\n     width:50%;\n}\n @font-face {\n     font-family: \"Averta\";\n     src: url(\"https://cdn.boletius.com/fonts/Averta-Light.woff2\") format(\"woff2\");\n     font-weight: 300;\n}\n @font-face {\n     font-family: \"Averta\";\n     src: url(\"https://cdn.boletius.com/fonts/Averta-Regular.woff2\") format(\"woff2\");\n     font-weight: 400;\n}\n @font-face {\n     font-family: \"Averta\";\n     src: url(\"https://cdn.boletius.com/fonts/Averta-Semibold.woff2\") format(\"woff2\");\n     font-weight: 600;\n}\n @font-face {\n     font-family: \"Averta\";\n     src: url(\"https://cdn.boletius.com/fonts/Averta-Bold.woff2\") format(\"woff2\");\n     font-weight: 700;\n}\n @font-face {\n     font-family: \"Averta\";\n     src: url(\"https://cdn.boletius.com/fonts/Averta-Black.woff2\") format(\"woff2\");\n     font-weight: 900;\n}\n @font-face {\n     font-family: \"Averta\";\n     src: url(\"https://cdn.boletius.com/fonts/Averta-RegularItalic.woff2\") format(\"woff2\");\n     font-style: italic;\n}\n @media (min-width: 780px) {\n     .event-header .ticket-shop #buyButton {\n         margin-left: 30px;\n    }\n}\n .event-header .ticket-shop {\n     position: relative;\n     background: rgba(251,252,255);\n     border: solid 2px #F1F2F5;\n}\n .event-header .ticket-shop #show-button, .event-header .ticket-shop #quantity-button {\n     border: solid 1px rgba(0, 0, 0, 0.15);\n}\n .navbar ul.user-menu {\n     padding: 15px 0 0 0;\n}\n .navbar-brand {\n     line-height: normal;\n}\n .event-header .ticket-shop.affix{\n     top: 60px;\n}\n .main {\n     height: 180px;\n     background: #024DDF !important;\n}\n .main h1 { display: none;}\n .navbar .btn {\n     margin-top: 0px;\n     background: transparent;\n     font-size: 1.1em;\n}\n #login_button #ingresar {\n     color: #353C42 !important;\n}\n .navbar a {\n     font-size:1em;\n}\n .navbar .logo {\n     padding: 20px 0;\n}\n .navbar-menu a:hover {\n     background-color: rgb(230, 230, 230);\n}\n .navbar-menu a:hover::after {\n     width:0px;\n}\n @media (min-width: 1600px){\n     .container {\n         width: 1260px;\n    }\n}\n .footer-tm {\n    color:#ffffff;\n}\n .footer-tm h5 {\n    font-size:1em;\n    font-weight:bold;\n    margin-bottom:15px;\n}\n .footer-tm ul {\n     padding:0;\n     margin:0 0 40px 0\n}\n .footer-tm ul li {\n     list-style:none;\n     display:block;\n     margin-bottom:10px;\n}\n .footer-tm ul li a {\n     color:#fff\n}\n .footer-tm img.logo {\n     margin:0 0 40px 0;\n     height:25px\n}\n .footer-tm .foo-copy {\n     text-align:right;\n     font-size:0.8em;\n}\n .footer-tm .foo-social a {\n     margin-right:20px\n}\n .footer {\n    border: none\n}\n @media (max-width: 768px){\n     .footer-tm .foo-social {\n         margin-bottom:40px\n    }\n     .footer-tm .foo-copy {\n         text-align:left;\n    }\n}\n #eventList.container {\n     width:100%;\n     padding:0;\n}\n .tm-main {\n     height: 92vh;\n     background: #024DDF;\n     background-image: url(https://cdn.getcrowder.com/images/1669406310174-null-main-br.jpg);\n     background-size: cover;\n     animation: bgAnimate 15s ease-in-out infinite alternate;\n     overflow:hidden;\n     text-align: center;\nborder-top: solid 30px #0262cf;\n}\n @keyframes bgAnimate {\n     0% {\n         background-position: 2% 0;\n    }\n     100% {\n         background-position: 100% 0;\n    }\n}\n .tm-main .tm-t {\n     margin-bottom: 10vh;\n}\n .tm-main .tm-t img {\n     height:35vh;\n     animation: tAnimate 2s ease-in-out;\n}\n @keyframes tAnimate {\n     0% {\n         transform: scale(2.5);\n         opacity:0;\n    }\n     100% {\n         transform: scale(1);\n         opacity:1;\n    }\n}\n .tm-main .tm-overlay {\n     display: flex;\n     flex-direction: column;\n     justify-content: center;\n     align-items: center;\n     flex-wrap: nowrap;\n     align-content:center ;\n     height: 100%;\n     background: linear-gradient(0deg, rgba(2,108,223,1) 0%, rgb(0 69 145 / 50%) 49%, rgba(2,108,223,0) 100%);\n}\n .tm-main h2 {\n     margin: 0;\n     font-size: 2em;\n     color: #fff;\n     font-weight: 400;\n     animation: h2Animate 1s ease-in-out;\n}\n .tm-main h2 span {\n     color: #00FFFF;\n}\n @keyframes h2Animate {\n     0% {\n         transform: scale(0.5);\n         opacity:0;\n    }\n     100% {\n         transform: scale(1);\n         opacity:1;\n    }\n}\n .tm-main i {\n     display: block;\n     width: 14px;\n     height: 14px;\n     border: solid 2px #ffffff70;\n     border-left: none;\n     border-top: none;\n     transform: rotate(45deg);\n     border-radius: 3px;\n     bottom: 8vh;\n     position: absolute;\n}\n .tm-suscribe {\n     background: #024DDF;\n     padding: 80px 20px 100px;\n     text-align: center;\n}\n .tm-suscribe h2 {\n     margin: 0;\n     font-size: 1.8em;\n     color: #fff;\n     font-weight: 400;\n}\n .tm-social {\n     display: block;\n     position: relative;\n     height: 300px;\n     color: #fff;\n     text-decoration: none;\n}\n .tm-social .tm-s {\n     width: 100%;\n     position: relative;\n     float: left;\n     height: 300px;\n     display: flex;\n     flex-direction: column;\n     flex-wrap: nowrap;\n     justify-content: center;\n     align-items: center;\n     align-content: center;\n     text-align: center;\n     background: #000;\n}\n .tm-social .tm-s h3 {\n     font-size:1.8em;\n     color: #fff;\n     margin: 0 0 10px 0;\n     font-weight: normal;\n}\n .tm-social .tm-s {\n     color: #fff;\n     text-decoration: none;\n     opacity: 0.95;\n     transition: 0.2s;\n}\n .tm-social .tm-s:hover{\n     opacity:1;\n}\n .tm-social .tm-s span {\n     color: #00FFFF;\n}\n.tm-social .tm-instagram {\nbackground: url(https://cdn.getcrowder.com/images/1683576764155-null-TM_Banner_Instagram.jpeg) no-repeat center center;\nbackground-size: cover;\n}\n.tm-social .tm-facebook {\nbackground: url(https://cdn.getcrowder.com/images/1683576746022-null-TM_Banner_Facebook.jpg) no-repeat center center;\nbackground-size: cover;\n}\n.tm-social .tm-linkedin {\nbackground: url(https://cdn.getcrowder.com/images/1683576712789-null-TM_Banner_LinkedIn.jpg) no-repeat center center;\nbackground-size: cover;\n}\n.tm-social .tm-twitter{\nbackground: url(https://cdn.getcrowder.com/images/1669823412469-null-twitter.jpg) no-repeat center center;\nbackground-size: cover;\n}\n.tm-social .tm-blog{\nbackground: url(https://cdn.getcrowder.com/images/1683576726535-null-TM_Banner_Blog.jpg) no-repeat center center;\nbackground-size: cover;\n}\n.tm-social .tm-tiktok {\nbackground: url(https://cdn.getcrowder.com/images/1691588419752-null-tiktok.jpeg) no-repeat center center;\nbackground-size: cover;\n}\n\n.tm-social .tm-overlay img {\nwidth:40px;\n}\n\n .tm-business {\n     background:#1F262D;\n     padding: 100px 20px;\n     text-align: center;\n     border-bottom: solid 1px #363636;\n}\n .tm-business h2 {\n     margin: 0;\n     font-size: 1.8em;\n     color: #fff;\n     font-weight: 400;\n     margin: 0 0 60px 0;\n}\n .tm-business a {\n     border: solid 1px #fff;\n     text-decoration: none;\n     padding: 18px 30px;\n     font-size:1.1em;\n     color: #fff;\n}\n @media (max-width: 768px){\n     .tm-main {\n         height: 70vh;\n         background-image: url(https://cdn.getcrowder.com/images/1669406540752-null-main-m.jpg);\n         animation: bgAnimate 25s ease-in infinite alternate;\n    }\n     .tm-main .tm-overlay {\n         padding: 0 30px;\n         background: linear-gradient(0deg, #024DDF 0%, #024DDFb0 49%, #024DDF94 100%);\n    }\n     .tm-main .tm-t img {\n         height:150px;\n    }\n     .tm-social {\n         display: block;\n         position: relative;\n         height: 300px;\n    }\n}\n .navbar {\n     height: 60px;\n     background-color:#024DDF;\n     box-shadow: none !important;\n}\n .navbar img.logo {\n     filter: grayscale(1) brightness(5);\n}\n .navbar-menu a {\n     color: #fff;\n     font-size: 1.1em !important;\n}\n .navbar-menu a:hover {\n     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.176));\n     background-color: #0000 !important;\n}\n #login_button #ingresar {\n     color: #fff !important;\n}\n a.btn-togle span {\n     background:#fff;\n}\n .navbar a {\n     font-size: 1em;\n}\n .navbar-collapse ul li:first-child a {\n     border-top:none !important\n}\n .quentro-modal .modal-body {\n    padding: 20px !important;\n}\n .quentro-modal .modal-header a.quentro-logo img {\n    width: 120px;\n}\n .quentro-modal .modal-body img {\n    width: 80px !important;\n}\n .quentro-modal .close-quentro-modal {\n    width: 25px;\n     float: right !important;\n}\n #ot-sdk-btn.ot-sdk-show-settings.cookie-settings-btn {\n     color: white;\n     padding: 0;\n     border: 0;\n     font-size:0.9em;\n}\n #ot-sdk-btn.ot-sdk-show-settings.cookie-settings-btn:hover {\n     color: white;\n     background: none;\n}\n .tm-grid {\n}\n .tm-grid .tm-grid-event {\n     color: #fff;\n     background-size: cover;\n     background-position: center ;\n     height: 100%;\n}\n .tm-grid .tm-grid-event .tm-grid-event-overlay {\n    background: linear-gradient(90deg, rgba(6,25,46,0.95) 0%, rgba(8,30,54,0.65) 40%, rgba(13,32,52,0.15) 100%);\n     height: 100%;\n     display: flex;\n     align-items: flex-end\n}\n .tm-grid .event-title {\n     font-size:2em;\n     font-weight: 600;\n}\n .tm-grid .event-info {\n     font-size:1em;\n     margin-bottom: 20px;\n     font-weight:600\n}\n .tm-grid .event-info span {\n     opacity: 0.7;\n     display: block;\n     font-size:1em;\n     font-weight: normal;\n}\n .tm-grid a.btn-event {\n     font-size:1.1em;\n     color: #fff;\n     font-weight: 500;\n     background: var(--main-color);\n     padding: 12px 20px;\n     text-decoration: none;\n     display: inline-block;\n     border-radius:2px\n}\n .tm-grid .event-info-content {\n     padding: 70px;\n}\n\n\n.grid-1 { grid-area: 1 / 1 / 2 / 3; }\n.grid-2 { grid-area: 2 / 1 / 3 / 2; }\n.grid-3 { grid-area: 2 / 2 / 3 / 3; }\n.grid-4 { grid-area: 3 / 1 / 4 / 2; }\n.grid-5 { grid-area: 3 / 2 / 4 / 3; }\n.grid-6 { grid-area: 4 / 1 / 5 / 3; }\n.grid-1 , .grid-2 , .grid-3, .grid-4 , .grid-5, .grid-6, .grid-7, .grid-8 { height: 60vh; }\n\n.grid-1 { width:50%; position: relative;float: left;}\n.grid-2 { width:100% ; position: relative;float: left;}\n\n.grid-1, .grid-2 {\n    height: 55vh;\n    min-height: 400px;\n}\n \n @media (max-width: 1440px){\n     .tm-grid .event-title {\n         font-size: 1.6em;\n    }\n     .tm-grid .event-info {\n         font-size: 1em;\n    }\n     .tm-grid .event-info-content {\n         padding: 4em;\n    }\n     .tm-grid a.btn-event {\n         font-size: 1em;\n        padding: 10px 15px;\n    }\n}\n @media (max-width: 768px){\n\n     .parent-grid {\n        display: flex;\n        flex-direction: column;\n         height: auto;\n    }\n\n    .grid-1 , .grid-2 , .grid-3, .grid-4 , .grid-5, .grid-6, .grid-7, .grid-8 { height: 50vh; }\n\n\n     .tm-grid .event-info-content {\n         padding:30px 20px;\n    }\n     .tm-grid .event-info span {\n         margin: 0;\n         display: block;\n    }\n}\n body {\n     --order-top-bg: #0046cb;\n     --order-top-color: #fff;\n     --header-height: 60px;\n     padding-top:60px;\n}\n .pg_content .pg_sidebar {\n     display:none !important\n}\n .pg_content .col-sm-8 {\n     margin: 0px auto;\n     width:100%;\n     padding: 0 200px;\n     float: inherit;\n}\n @media (max-width: 1280px){\n    .pg_content .col-sm-8 {\n        padding: 0px 100px;\n    }\n }\n \n @media (max-width: 768px){\n    .pg_content .col-sm-8 {\n        padding: 0px 20px;\n    }\n    .grid-1, .grid-2 {\n        height: 40vh;\n        width: 100%;\n        min-height: 350px;\n    }\n}"},"homeComponents":[{"type":"HtmlComponent","relevance":9,"html":"<div class=\"home-events\" style=\"padding: 0;margin:30px auto 60px auto\">\n    <div class=\"row\">\n        <div class=\"col-xs-12\">\n            <a target=\"_blank\" href=\"https://tickets.rockinriolisboa.pt/event/rock-in-rio-lisboa-2024/parque-tejo-lisboa/2798220?src=tmbr\">\n            <img loading=\"lazy\" src=\"https://cdn.getcrowder.com/images/1697846253963-null-RIRLX24_TICKETMASTER_Generico_1920x628.jpg\" style=\"width: 100%; border-radius: 6px;\">\n            </a>\n        </div>\n    </div>\n</div>"},{"type":"HtmlComponent","relevance":8,"html":"<div class=\"home-events\" style=\"padding: 0;margin:-40px auto 60px auto\">\n<div class=\"row\">\n      <div class=\"col-xs-12 col-md-6\">\n        <div class=\"event-thumb\">\n          <a href=\"https://www.ticketmaster.com.br/venue/qualistage\">\n            <div class=\"va-container va-container-v va-container-h\">\n              <img loading=\"lazy\" src=\"https://cdn.getcrowder.com/images/1712842851205-null-Qualistage_Banner_v3.png\">   \n            </div>\n          </a>\n        </div>\n      </div>\n    <div class=\"col-xs-12 col-md-6\">\n        <div class=\"event-thumb\">\n          <a href=\"https://www.ticketmaster.com.br/venue/multiplan-hall\">\n            <div class=\"va-container va-container-v va-container-h\">\n              <img loading=\"lazy\" src=\"https://cdn.getcrowder.com/images/1712682292879-null-multiplan.png\">   \n            </div>\n          </a>\n        </div>\n      </div></div>\n</div>"},{"type":"HtmlComponent","relevance":1,"html":"<div class=\"home-events\" style=\"padding: 0;margin:40px auto 0px auto\">\n    <div class=\"row\">\n        <div class=\"col-xs-12\">\n            <a href=\"https://www.ticketmaster.com.br/event/caetanoebethania\">\n            <img loading=\"lazy\" src=\"https://cdn.getcrowder.com/images/1712860399864-null-C&B_1920x720_HOME_NOVO.png\" style=\"width: 100%; border-radius: 6px;\">\n            </a>\n        </div>\n    </div>\n</div>"},{"type":"HtmlComponent","relevance":3,"html":"<!-- Esgotado  -->\n<div class=\"home-events\" style=\"padding: 0;margin: 40px auto 0px auto\">\n    <div class=\"row\">\n        <div class=\"col-xs-12\">\n            <a href=\"https://www.ticketmaster.com.br/static/rock-in-rio\">\n            <img loading=\"lazy\" src=\"https://cdn.getcrowder.com/images/1710975075650-null-HOME_BANNER_ANUNCIO8_2003_BC_V2.jpg\" style=\"width: 100%; border-radius: 6px;\">\n</a></div>"},{"type":"HtmlComponent","relevance":4,"html":"<div class=\"home-events\" style=\"padding: 0;margin:40px auto 0px auto\">\n    <div class=\"row\">\n        <div class=\"col-xs-12\">\n            <a href=\"https://www.ticketmaster.com.br/event/emicida\">\n            <img loading=\"lazy\" src=\"https://cdn.getcrowder.com/images/35682ef4-886a-4748-894f-c143dec127d6-emicida1920x720.png?w=1140\" style=\"width: 100%; border-radius: 6px;\">\n            </a>\n        </div>\n    </div>\n</div>"},{"type":"EventListComponent","relevance":7,"showEventTitles":true,"showEventDescriptions":true,"showEventVenues":false,"showButtons":false,"group":null},{"type":"SearchComponent","relevance":0,"image":"https://cdn.getcrowder.com/images/1702672779150-null-trans.png","title":null,"subtitle":null,"variant":"V2"},{"type":"HtmlComponent","relevance":10,"html":"<div class=\"tm-suscribe\">\n    <h2>Inscreva-se para saber as novidades</h2>\n<iframe allow=\"autoplay\" sandbox=\"allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation allow-top-navigation-by-user-activation allow-downloads allow-popups-to-escape-sandbox\" id=\"pD2hFh\" class=\"embed_frame\" loading=\"lazy\" src=\"https://m.cmpgn.page/pD2hFh?embed=3\" style=\"border:none;min-width:100%;height:220px\" allowpaymentrequest allowfullscreen data-hj-allow-iframe></iframe>\n</div>"},{"type":"HtmlComponent","relevance":11,"html":"<div class=\"tm-social\">\n    <div id=\"carousel-social\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n            <li data-target=\"#carousel-social\" data-slide-to=\"0\" class=\"active\"></li>\n            <li data-target=\"#carousel-social\" data-slide-to=\"1\"></li>\n            <li data-target=\"#carousel-social\" data-slide-to=\"2\"></li>\n            <li data-target=\"#carousel-social\" data-slide-to=\"3\"></li>\n            <li data-target=\"#carousel-social\" data-slide-to=\"4\"></li>\n        </ol>\n        <div class=\"carousel-inner\" role=\"listbox\">\n            <div class=\"item active\" alt=\"© Helena Yoshioka\">\n                <a class=\"tm-s tm-instagram\" href=\"https://www.instagram.com/ticketmasterBR\" target=\"_blank\">\n                    <div class=\"tm-overlay\">\n                        <img src=\"https://cdn.getcrowder.com/images/1669823530854-null-instagram.png\"> <br>\n                        <br>\n                        <h3>Faça parte do backstage</h3>\n                        Nos siga no <span>Instagram</span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"item\" alt=\"© Helena Yoshioka\">\n                <a class=\"tm-s tm-facebook\" href=\"https://www.facebook.com/ticketmasterBR\" target=\"_blank\">\n                    <div class=\"tm-overlay\">\n                        <img src=\"https://cdn.getcrowder.com/images/1669823545822-null-facebook.png\"> <br>\n                        <br>\n                        <h3>Faça parte da comunidade</h3>\n                        Nos siga no <span>Facebook</span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"item\" alt=\"© Helena Yoshioka\">\n                <a class=\"tm-s tm-linkedin\" href=\"https://www.linkedin.com/company/ticketmasterBR\" target=\"_blank\">\n                    <div class=\"tm-overlay\">\n                        <img src=\"https://cdn.getcrowder.com/images/1669823560485-null-linkedin.png\"> <br>\n                        <br>\n                        <h3>Faça parte do business</h3>\n                        Nos siga no <span>Linkedin</span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"item\" alt=\"© Helena Yoshioka\">\n                <a class=\"tm-s tm-tiktok\" href=\"https://www.tiktok.com/@ticketmasterbr\" target=\"_blank\">\n                    <div class=\"tm-overlay\">\n                        <img src=\"https://cdn.getcrowder.com/images/1691588331940-null-l-tiktok.png\"> <br>\n                        <br>\n                        <h3>Faça parte da diversão</h3>\n                        Nos siga no <span>TikTok</span>\n                    </div>\n                </a>\n            </div>\n            <div class=\"item\" alt=\"© Helena Yoshioka\">\n                <a class=\"tm-s tm-blog\" href=\"https://blog.ticketmaster.com.br/\" target=\"_blank\">\n                    <div class=\"tm-overlay\">\n                        <img style=\" width: 90px !important;\" src=\"https://cdn.getcrowder.com/images/1683574125568-null-blog.png\"> <br>\n                        <br>\n                        <h3>Fique por dentro das novidades</h3>\n                        Accese nosso <span>Blog</span>\n                    </div>\n                </a>\n            </div>\n        </div>\n        <a class=\"left carousel-control\" href=\"#carousel-social\" role=\"button\" data-slide=\"prev\">\n            <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"right carousel-control\" href=\"#carousel-social\" role=\"button\" data-slide=\"next\">\n            <span class=\"sr-only\">Next</span>\n        </a>\n    </div>\n</div>\n<div style=\"\n    text-align: right;\n    padding: 5px 10px;\n    font-size: 12px;\n    font-weight: 600;\n    background: #1f262c;\n    color: #ffffff4d;\n\">© Helena Yoshioka</div>"}],"userConfiguration":{"requireDocument":true,"requireGender":true,"legalTerms":null,"enabledCountries":[],"passwordStrength":true,"blockDocumentChange":true,"blockEmailChange":true,"minimumAge":18},"support":{"email":"info@ticketmaster.com.br","link":"https://help.ticketmaster.com.br/hc/pt-br","linkOrMail":"https://help.ticketmaster.com.br/hc/pt-br","linkOrMailLink":"https://help.ticketmaster.com.br/hc/pt-br"},"customFooter":"<div class=\"footer-tm text-left\">\n<div class=\"row\">\n<div class=\"col-xs-12 col-sm-4\">\n<h5>Acesso R&aacute;pido</h5>\n\n<ul>\n\t<li><a href=\"../account/purchases\">Minhas Compras</a></li>\n\t<li><a href=\"../account/perfil\">Meu Perfil</a></li>\n\t<li><a href=\"https://help.ticketmaster.com.br/hc/pt-br\" target=\"_blank\">Suporte ao F&atilde;</a></li>\n\t<li><a href=\"https://www.ticketmaster.com.br/static/acessibilidade\" target=\"_blank\">Acessibilidade</a></li>\n</ul>\n</div>\n\n<div class=\"col-xs-12 col-sm-4\">\n<h5>Termos e Pol&iacute;ticas</h5>\n\n<ul>\n\t<li><a href=\"../static/termos-de-uso\" target=\"_blank\">Termos de Uso</a></li>\n\t<li><a href=\"../static/politica-de-compra\" target=\"_blank\">Pol&iacute;tica de Compra</a></li>\n\t<li><a href=\"https://privacy.ticketmaster.com.br/pt/cookie-policy\" target=\"_blank\">Pol&iacute;tica de Cookies</a></li>\n\t<li><a href=\"https://privacy.ticketmaster.com.br/pt/privacy-policy\" target=\"_blank\">Pol&iacute;tica de Privacidade</a></li>\n</ul>\n</div>\n\n<div class=\"col-xs-12 col-sm-4\">\n<h5>Sobre a Ticketmaster</h5>\n\n<ul>\n\t<li><a href=\"https://business.ticketmaster.com.br/pt/\" target=\"_blank\">Ticketmaster Brasil</a></li>\n\t<li><a href=\"https://business.ticketmaster.com.br/pt/nossa-historia/\" target=\"_blank\">Ticketmaster Internacional</a></li>\n\t<li><a href=\"https://www.linkedin.com/company/ticketmasterBR\" target=\"_blank\">Trabalhe com a gente</a></li>\n\t<li><a href=\"https://www.ticketmaster.com.br/static/programadeestagio\" target=\"_blank\">Programa de Est&aacute;gio</a></li>\n</ul>\n</div>\n</div>\n\n<div class=\"row\">\n<div class=\"col-xs-12\"><img alt=\"Ticketmaster\" class=\"logo\" src=\"https://cdn.boletius.com/ticketmaster/ticketmaster-logo_white.png\" /></div>\n</div>\n\n<div class=\"row\">\n<div class=\"col-xs-12 col-sm-6 foo-social\"><a href=\"https://www.instagram.com/ticketmasterBR/\" target=\"_blank\"><img alt=\"Instagram\" src=\"https://cdn.boletius.com/images/1643379600508-instagram.png\" style=\"height: 16px;\" /></a> <a href=\"https://www.facebook.com/ticketmasterbr\" target=\"_blank\"><img alt=\"\nfacebook\" src=\"https://cdn.boletius.com/images/1643379516372-facebook.png\" style=\"height: 16px;\" /></a> <a href=\"https://www.linkedin.com/company/ticketmasterBR\" target=\"_blank\"><img alt=\"Linkedin\" src=\"https://cdn.boletius.com/images/1643379625842-linkedin.png\" style=\"height: 16px;\" /></a><a href=\"https://www.tiktok.com/@ticketmasterbr\" target=\"_blank\"><img alt=\"Linkedin\" src=\"https://cdn.getcrowder.com/images/1691588331940-null-l-tiktok.png\" style=\"height: 16px;\" /></a><a href=\"https://blog.ticketmaster.com.br\" target=\"_blank\"><img alt=\"Linkedin\" src=\"https://cdn.getcrowder.com/images/1683574125568-null-blog.png\" style=\"height: 16px;\" /></a></div>\n\n<div class=\"col-xs-12 col-sm-6 foo-copy\"><a class=\"ot-sdk-show-settings cookie-settings-btn\" id=\"ot-sdk-btn\">Defini&ccedil;&otilde;es de Cookies&nbsp;&nbsp;</a>&copy; 2023&nbsp;Ticketmaster.</div>\n</div>\n</div>","newEmailsEnabled":true,"showFooter":false,"featureTicketing":true,"menuCategories":[],"optInText":"Deixe-nos mantê-lo informado sobre o que está por vir – incluindo pré-vendas e ofertas exclusivas – por meios eletrônicos (por exemplo, e-mail, ferramentas de mensageria, redes sociais, etc.). Você sempre pode alterar a forma como entramos em contato com você por meio de sua conta Ticketmaster.","lang":"pt","headline":"Ticketmaster","favicon":"https://cdn.getcrowder.com/images/c1ade2d9-b2d1-484a-b163-0e5509e00144-favicon-32x32.png","showAssociatePurchaseButton":false,"showCategoriesOnMenu":false,"homeRedirect":null,"gatewaysByCountry":true,"featureSeasonPass":false,"alwaysShowDeliveryMethod":true,"requireBillingAddress":true,"featurePaymentVerificationMP":true,"reCaptchaPublicKey":"6Ld_eF4iAAAAANPRy5jjrybmHdG0ca7zRUNwiHAc","featureCashless":false},"locale":"pt","params":{"w":"300","id":"venda-rock-in-rio","country":"ar","url":"www.ticketmaster.com.br"},"channelId":21649,"properties":[{"name":"og:image","value":"https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png"},{"name":"og:title","value":"Rock in Rio"},{"name":"og:url","value":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"name":"og:site_name","value":"Ticketmaster Brasil"},{"name":"og:type","value":"website"},{"name":"og:description","value":"Rock In Rio"},{"name":"description","value":"Rock In Rio"},{"name":"fb:app_id"}],"additionalMeta":[{"name":"twitter:card","value":"summary_large_image"},{"name":"twitter:title","value":"Rock in Rio"},{"name":"twitter:description","value":"Rock In Rio"},{"name":"twitter:img:src","value":"https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png"},{"name":"description","value":"Rock In Rio"},{"name":"keywords","value":"entradas,evento,undefined,"}],"canonicalUrl":"https://www.ticketmaster.com.br/event/venda-rock-in-rio","title":"Rock in Rio","schemaData":{"location":{"address":{"streetAddress":"Av. Salvador Allende","addressLocality":"rio de janeiro","postalCode":"22780-160"},"@type":"Place","name":"Cidade do Rock"},"offers":[{"@type":"Offer","validFrom":null,"price":795,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":397.5,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":675.75,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":795,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":675.75,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":397.5,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":397.5,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":675.75,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"},{"@type":"Offer","validFrom":null,"price":795,"priceCurrency":"BRL","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio"}],"performer":[],"@context":"http://schema.org/","@type":"Event","name":"Rock in Rio","startDate":"2024-09-21T17:00:00Z","description":"Rock In Rio","image":"https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png","url":"https://www.ticketmaster.com.br/event/venda-rock-in-rio","endDate":"2024-09-22T02:00:00Z"}});
+				App.bootstrapData({"model":{"summary":{"model":"event","id":5149},"data":{"w":"300","id":5149,"country":"ar","url":"www.ticketmaster.com.br","minorsPolicy":null,"limitByUser":{"quantity":28,"message":"Venda limitada a até 28 (vinte e oito) ingressos por CPF."},"configurationUrl":null,"footerBannerDesktop":null,"addons":[],"channel":21649,"selectionType":{"id":5844,"type":"MultiProductSelection","message":null},"wildcardName":"Rock in Rio","shows":[{"id":25300,"startDate":"2024-09-15T17:00:00Z","endDate":"2024-09-16T02:00:00Z","doorTime":"2024-09-15T17:00:00Z","name":"15 de Setembro","salesStart":null,"description":"Avenged Sevenfold","image":null,"manualSeatPickingEnabled":false,"startDateFormat":"15/09/2024 14:00","seatPickingStrategy":"ONLY_BEST_SEATS","sectionAvailability":[],"sectors":[{"id":63232,"name":"Gramado","details":null,"isNumbered":null,"rates":[{"id":540562,"name":"Meia-Entrada","description":"Meia-entrada válida para estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro e jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":397.5,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":1,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":{"extraFieldsTypes":["Garis","OldMan","Student","Teachers","LowIncomeYouth","YoungMan","DisabledPerson"],"instructions":null,"fillDocumentTwice":null,"deferred":null},"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"397.50"},{"id":540561,"name":"Benefício Itaú 15%","description":"O desconto de 15% e o parcelamento em até 8x sem juros são válidos até o final da cota de ingressos disponibilizada para venda pela organização do evento e apenas para pagamento com cartões de crédito Itaú, Credicard e Iti. As condições promocionais para esta venda  são válidas para aquisição de até 04 (quatro) ingressos por dia de festival, por CPF sendo até 01 (uma meia entrada) por dia. Este desconto não é cumulativo com outros descontos e não é válido para compra de meia-entrada garantida por lei: estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro, jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":675.75,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":4,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":null,"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":true,"available":true,"runningLow":false,"pickerPrice":"675.75"},{"id":540559,"name":"Inteira","description":null,"price":795,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":4,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":null,"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"795.00"}],"sections":[],"hasSecondaryProducts":false,"productLevel":"PRIMARY","uuid":null,"color":null,"stations":[],"sortOrder":null,"available":true,"minRate":{"id":540562,"name":"Meia-Entrada","description":"Meia-entrada válida para estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro e jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":397.5,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":1,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":{"extraFieldsTypes":["Garis","OldMan","Student","Teachers","LowIncomeYouth","YoungMan","DisabledPerson"],"instructions":null,"fillDocumentTwice":null,"deferred":null},"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"397.50"}}],"chartURL":null,"startDateString":"15 de setembro de 2024 às 14:00","available":true},{"id":25301,"startDate":"2024-09-19T17:00:00Z","endDate":"2024-09-20T02:00:00Z","doorTime":"2024-09-19T17:00:00Z","name":"19 de Setembro","salesStart":null,"description":"Ed Sheeran","image":null,"manualSeatPickingEnabled":false,"startDateFormat":"19/09/2024 14:00","seatPickingStrategy":"ONLY_BEST_SEATS","sectionAvailability":[],"sectors":[{"id":63233,"name":"Gramado","details":null,"isNumbered":null,"rates":[{"id":540565,"name":"Meia-Entrada","description":"Meia-entrada válida para estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro e jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":397.5,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":1,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":{"extraFieldsTypes":["Garis","OldMan","Student","Teachers","LowIncomeYouth","YoungMan","DisabledPerson"],"instructions":null,"fillDocumentTwice":null,"deferred":null},"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"397.50"},{"id":540564,"name":"Benefício Itaú 15%","description":"O desconto de 15% e o parcelamento em até 8x sem juros são válidos até o final da cota de ingressos disponibilizada para venda pela organização do evento e apenas para pagamento com cartões de crédito Itaú, Credicard e Iti. As condições promocionais para esta venda  são válidas para aquisição de até 04 (quatro) ingressos por dia de festival, por CPF sendo até 01 (uma meia entrada) por dia. Este desconto não é cumulativo com outros descontos e não é válido para compra de meia-entrada garantida por lei: estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro, jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":675.75,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":4,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":null,"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":true,"available":true,"runningLow":false,"pickerPrice":"675.75"},{"id":540563,"name":"Inteira","description":null,"price":795,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":4,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":null,"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"795.00"}],"sections":[],"hasSecondaryProducts":false,"productLevel":"PRIMARY","uuid":null,"color":null,"stations":[],"sortOrder":null,"available":true,"minRate":{"id":540565,"name":"Meia-Entrada","description":"Meia-entrada válida para estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro e jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":397.5,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":1,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":{"extraFieldsTypes":["Garis","OldMan","Student","Teachers","LowIncomeYouth","YoungMan","DisabledPerson"],"instructions":null,"fillDocumentTwice":null,"deferred":null},"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"397.50"}}],"chartURL":null,"startDateString":"19 de setembro de 2024 às 14:00","available":true},{"id":25303,"startDate":"2024-09-21T17:00:00Z","endDate":"2024-09-22T02:00:00Z","doorTime":"2024-09-21T17:00:00Z","name":"21 de Setembro","salesStart":null,"description":"Dia Brasil","image":null,"manualSeatPickingEnabled":false,"startDateFormat":"21/09/2024 14:00","seatPickingStrategy":"ONLY_BEST_SEATS","sectionAvailability":[],"sectors":[{"id":63235,"name":"Gramado","details":null,"isNumbered":null,"rates":[{"id":540574,"name":"Meia-Entrada","description":"Meia-entrada válida para estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro e jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":397.5,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":1,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":{"extraFieldsTypes":["Garis","OldMan","Student","Teachers","LowIncomeYouth","YoungMan","DisabledPerson"],"instructions":null,"fillDocumentTwice":null,"deferred":null},"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"397.50"},{"id":540571,"name":"Benefício Itaú 15%","description":"O desconto de 15% e o parcelamento em até 8x sem juros são válidos até o final da cota de ingressos disponibilizada para venda pela organização do evento e apenas para pagamento com cartões de crédito Itaú, Credicard e Iti. As condições promocionais para esta venda  são válidas para aquisição de até 04 (quatro) ingressos por dia de festival, por CPF sendo até 01 (uma meia entrada) por dia. Este desconto não é cumulativo com outros descontos e não é válido para compra de meia-entrada garantida por lei: estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro, jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":675.75,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":4,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":null,"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":true,"available":true,"runningLow":false,"pickerPrice":"675.75"},{"id":540570,"name":"Inteira","description":null,"price":795,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":4,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":null,"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"795.00"}],"sections":[],"hasSecondaryProducts":false,"productLevel":"PRIMARY","uuid":null,"color":null,"stations":[],"sortOrder":null,"available":true,"minRate":{"id":540574,"name":"Meia-Entrada","description":"Meia-entrada válida para estudantes, menores de 21 anos, maiores de 60 anos, deficientes e seu acompanhante, profissionais e professores da rede de ensino do Rio de Janeiro e jovens de baixa renda e garis da Companhia Municipal de Limpeza Urbana.","price":397.5,"readableId":null,"availability":null,"customLegalContent":null,"serviceChargeAmount":0,"passcodeRequired":false,"showAsDisabled":false,"runningLowThreshold":0,"max":1,"min":null,"validator":null,"allowedDigitalRepresentation":true,"holderConfiguration":{"extraFieldsTypes":["Garis","OldMan","Student","Teachers","LowIncomeYouth","YoungMan","DisabledPerson"],"instructions":null,"fillDocumentTwice":null,"deferred":null},"defaultHeld":null,"freeShipping":false,"weight":100,"hasPaymentMethodRestriction":false,"available":true,"runningLow":false,"pickerPrice":"397.50"}}],"chartURL":null,"startDateString":"21 de setembro de 2024 às 14:00","available":true}],"enableAccessibility":true,"combos":[],"tag":"venda-rock-in-rio","showCaptchaOnRegister":true,"oneTrustId":"335c8215-96b5-4b4c-91b1-4f1dd9016a7b","landingPageUrl":null,"useHomeCMS":true,"refundServiceEnabled":true,"fraudData":null,"image":"https://cdn.getcrowder.com/images/bf37edc6-5a3e-43c7-8b81-0787e5d223f5-banner-home-site-tmvendasabertas15-05nr-2.png","gateways":[{"id":25211,"name":"PIX","credentials":{"id":1,"name":"PIX - Itau","type":"PixCredentials"},"bannerImage":null,"type":"PixConfiguration","scope":"LOCAL"},{"id":26969,"name":"Cartão de Crédito","credentials":{"id":123,"publicKey":"APP_USR-aba0744d-0647-4be7-9944-48db2fdc21d3","paymentType":"MERCADO_PAGO","type":"MercadoPagoCredentials","country":null},"type":"MercadoPagoAdvancedConfiguration","bannerImage":"https://cdn.getcrowder.com/images/ff580900-f4b4-43f0-a518-e945c6097774-logorede.jpg","scope":"LOCAL"},{"id":25209,"name":"International Card","bannerImage":"https://cdn.getcrowder.com/images/11382bde-039c-4637-a041-55e4f6d7db5d-thetown-logocartao.png","type":"BraintreeConfiguration","scope":"FOREIGN"}],"sitefEnabled":true,"comboName":"Pacote","showsRange":{},"featurePaymentVerification":true,"usePagesCMS":true,"eventType":"SIMPLE","hasPromotionsAvailable":false,"useLandingComponents":true,"showCaptchaOnLogin":true,"featureDeferred":true,"name":"Rock in Rio","donationCampaigns":[{"id":11,"name":"Ação Cidadania","description":"Estamos de volta ao mapa da fome. Enquanto o Brasil bate recordes na produção de alimentos, milhões de pessoas não têm o que comer. Os números desanimam, mas a gente não. Somos a Ação da Cidadania, ONG que une forças para garantir que todos tenham acesso diário à comida de verdade, suficiente, boa e variada. É com essa inspiração do nosso fundador Betinho, que seguimos lutando há mais de 30 anos. Porque uma sociedade mais justa e igualitária só se constrói no coletivo. E quem tem fome tem pressa.","image":"https://cdn.getcrowder.com/images/7aec6e15-4f26-436e-a55e-2f169a6373c0-acaodacidadanialogo.png","currency":{"name":"BRL","symbol":"R$"},"suggestedAmounts":[150,10,20,50,100],"allowCustomAmount":false,"minAmount":10,"link":"https://campaign.doare.org/ambassadors-campaigns/natalsemfome23/4be52d44-0cca-4f97-b3b7-2c4a8da03d84"},{"id":6,"name":"Gerando Falcões","description":"A Gerando Falcões é um ecossistema de desenvolvimento social que atua, com a força de uma Rede ONGs, no combate à pobreza, em mais de 5.500 favelas do Brasil. Para alcançarmos a transformação social necessária, é fundamental a união de forças entre empresas, governos, ONGs e sociedade civil. E é aqui que te convidamos a nos apoiar. Doe para a Gerando Falcões e seja, também, parte dessa história.","image":"https://cdn.getcrowder.com/images/826d8c53-e8d5-43e3-a94c-5776ec735afa-logo-gerando-falces.jpeg","currency":{"name":"BRL","symbol":"R$"},"suggestedAmounts":[150,10,20,50,100],"allowCustomAmount":false,"minAmount":10,"link":"https://gerandofalcoes.com/?utm_campaign=gf_institucional_atracao_alcance_site-institucional-rir_site-gf_botao-site-parceiro_brasil&utm_source=atracao&utm_medium=alcance&utm_content=_"}],"affiliates":[],"gtmId":null,"longDescription":"%3Cp%3EData%2013%2C%2014%2C%2015%2C%2019%2C%2020%2C%2021%20e%2022%20de%20Setembro%20de%202024%3C/p%3E%0A%0A%3Cp%3E%3Cspan%20style%3D%22color%3A%23222222%22%3EAbertura%20de%20Portas%3A%2014H%3C/span%3E%3C/p%3E%0A%0A%3Cp%3E%3Cspan%20style%3D%22color%3A%23222222%22%3EHor%26aacute%3Brio%20Limite%20Entrada%20no%20Evento%3A%2000H%3C/span%3E%3C/p%3E%0A%0A%3Cp%3ELocal%3A%20Cidade%20do%20Rock%3C/p%3E%0A%0A%3Cp%3E%3Cspan%20style%3D%22color%3A%23222222%22%3ERio%20de%20Janeiro%20-%20RJ%3C/span%3E%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%3Cstrong%3ESobre%20o%20Rock%20in%20Rio%202024%26nbsp%3B%26nbsp%3B%3C/strong%3E%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E1984%20marca%20o%20in%26iacute%3Bcio%20das%20prepara%26ccedil%3B%26otilde%3Bes%20para%20a%20primeira%20edi%26ccedil%3B%26atilde%3Bo%20do%20evento%20idealizado%20por%20Roberto%20Medina%20e%20que%20hoje%2C%2040%20anos%20depois%2C%20%26eacute%3B%20considerado%20o%20maior%20festival%20de%20m%26uacute%3Bsica%20e%20entretenimento%20do%20mundo%20%26ndash%3B%20o%20Rock%20in%20Rio.%20Originalmente%20organizado%20no%20Rio%20de%20Janeiro%2C%20o%20festival%20ganhou%20o%20mundo%20chegando%20a%20Lisboa%20%28Portugal%29%2C%20onde%20%26eacute%3B%20realizado%20at%26eacute%3B%20hoje%2C%20passando%20por%20Madrid%20%28Espanha%29%20e%20Las%20Vegas%20%28USA%29.%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%20%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3EDesde%20a%20primeira%20edi%26ccedil%3B%26atilde%3Bo%2C%20j%26aacute%3B%20gerou%20265%20mil%20empregos%20diretos%20e%20indiretos%20e%2C%20apenas%20na%20%26uacute%3Bltima%2C%20em%202022%2C%20um%20impacto%20econ%26ocirc%3Bmico%20de%20mais%20de%202%20bilh%26otilde%3Bes%20na%20cidade%20do%20Rio%20de%20Janeiro.%20Tamb%26eacute%3Bm%20no%20ano%20passado%2C%20o%20Rock%20in%20Rio%20foi%20considerado%20patrim%26ocirc%3Bnio%20cultural%20imaterial%20do%20estado%20do%20Rio%20de%20Janeiro.%20Pelas%20Cidades%20do%20Rock%2C%20desde%201985%2C%20j%26aacute%3B%20passaram%20mais%20de%2011.2%20milh%26otilde%3Bes%20de%20visitantes%2C%20que%20assistiram%20a%203.816%20artistas%20em%20130%20dias%20de%20magia.%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3EGerando%20impactos%20positivos%20nos%20pa%26iacute%3Bses%20onde%20%26eacute%3B%20realizado%20e%20consciente%20do%20poder%20disseminador%20da%20marca%2C%20o%20Rock%20in%20Rio%20%26eacute%3B%20um%20evento%20com%20o%20prop%26oacute%3Bsito%20de%20construir%20um%20mundo%20melhor%20para%20pessoas%20mais%20felizes%2C%20confiantes%20e%20emp%26aacute%3Bticas%20num%20planeta%20mais%20saud%26aacute%3Bvel.%20Adotando%20e%20incentivando%20pr%26aacute%3Bticas%20que%20apoiam%20o%20coletivo%2C%20se%20une%20a%20empresas%20que%20possuem%20este%20mesmo%20olhar%20e%20diretriz.%3C/p%3E%0A%0A%3Cp%3EO%20ano%20de%202024%20ser%26aacute%3B%20de%20muitas%20comemora%26ccedil%3B%26otilde%3Bes%20para%20o%20Rock%20in%20Rio.%20O%20ano%20em%20que%20tudo%20come%26ccedil%3Bou%2C%2040%20anos%20depois%2C%20d%26aacute%3B%20in%26iacute%3Bcio%20%26agrave%3Bs%20celebra%26ccedil%3B%26otilde%3Bes.%20E%20a%20festa%20brasileira%20j%26aacute%3B%20est%26aacute%3B%20marcada%3A%2013%2C%2014%2C%2015%2C%2019%2C%2020%2C%2021%20e%2022%20de%20setembro%20de%202024%2C%20no%20Parque%20Ol%26iacute%3Bmpico%2C%20Rio%20de%20Janeiro.%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%3Cstrong%3EPontos%20de%20venda%3A%3C/strong%3E%3C/p%3E%0A%0A%3Cp%3EVenda%20exclusivamente%20online%20pelo%20site%20Ticketmaster.com.br.%3C/p%3E%0A%0A%3Cp%3ENesta%20venda%20voc%26ecirc%3B%20poder%26aacute%3B%20adquirir%20at%26eacute%3B%2004%20%28%20quatro%29%20ingressos%20por%20dia%20de%20festival%20por%20CPF%2C%20sendo%20no%20m%26aacute%3Bximo%2001%28uma%29%20meia%20entrada%20por%20dia.%20M%26aacute%3Bximo%20de%2028%20%28vinte%20e%20oito%29%20ingressos%20por%20CPF.%20%26nbsp%3B%3Cstrong%3E%26nbsp%3B%20%26nbsp%3B%3C/strong%3E%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%3Cstrong%3EClientes%20Ita%26uacute%3B%3C/strong%3E%3C/p%3E%0A%0A%3Ctable%20width%3D%221429%22%3E%0A%09%3Ctbody%3E%0A%09%09%3Ctr%20height%3D%2221%22%3E%0A%09%09%09%3Ctd%20colspan%3D%2210%22%20height%3D%2263%22%20rowspan%3D%223%22%20width%3D%221429%22%3EClientes%20Ita%26uacute%3B%20que%20efetuarem%20a%20compra%20com%20cart%26otilde%3Bes%20de%20cr%26eacute%3Bdito%20Ita%26uacute%3B%2C%20Credicard%20e%20Iti.%20possuem%20desconto%20de%2015%25%20e%20parcelamento%20em%20at%26eacute%3B%208x%20sem%20juros.%20As%20condi%26ccedil%3B%26otilde%3Bes%20promocionais%20s%26atilde%3Bo%20v%26aacute%3Blidas%20para%20aquisi%26ccedil%3B%26atilde%3Bo%20de%20at%26eacute%3B%2004%20%28quatro%29%20ingressoss%20por%20dia%20de%20festival%20%2C%20por%20cpf%2C%20sendo%20at%26eacute%3B%2001%20%28uma%29%20meia%20entrada%20por%20dia.%20Este%20desconto%20n%26atilde%3Bo%20%26eacute%3B%20cumulativo%20com%20outros%20descontos%20e%20n%26atilde%3Bo%20%26eacute%3B%20v%26aacute%3Blido%20para%20compra%20de%20meia-entrada%20garantida%20por%20lei%3A%20estudantes%2C%20menores%20de%2021%20anos%2C%20maiores%20de%2060%20anos%2C%20deficientes%20e%20seu%20acompanhante%2C%20profissionais%20e%20professores%20da%20rede%20de%20ensino%20do%20Rio%20de%20Janeiro%2C%20jovens%20de%20baixa%20renda%20e%26nbsp%3Bgaris%20da%20Companhia%20Municipal%20de%20Limpeza%20Urbana.%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%3C/td%3E%0A%09%09%3C/tr%3E%0A%09%09%3Ctr%20height%3D%2221%22%3E%0A%09%09%3C/tr%3E%0A%09%09%3Ctr%20height%3D%2221%22%3E%0A%09%09%3C/tr%3E%0A%09%3C/tbody%3E%0A%3C/table%3E%0A%0A%3Cp%3E%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%3Cstrong%3EFormas%20de%20Pagamento%3C/strong%3E%3C/p%3E%0A%0A%3Cp%3ECart%26atilde%3Bo%20de%20Cr%26eacute%3Bdito%20ou%20PIX.%3C/p%3E%0A%0A%3Cp%3EClientes%20que%20efetuarem%20o%20pagamento%20com%20os%20cart%26otilde%3Bes%20de%20cr%26eacute%3Bdito%20Ita%26uacute%3B%2C%26nbsp%3BCredicard%20e%20Iti%20t%26ecirc%3Bm%2015%25%20de%20desconto%20na%20compra%20de%20ingressos%20%28n%26atilde%3Bo%20cumulativos%20com%20a%20meia-entrada%29%20e%20poder%26atilde%3Bo%20parcelar%20sua%20compra%20em%20at%26eacute%3B%208x%20sem%20juros.%20Nos%20demais%20cart%26otilde%3Bes%20aceitos%2C%20o%20pagamento%20poder%26aacute%3B%20ser%20feito%20em%20at%26eacute%3B%206x%20sem%20juros.%20Exce%26ccedil%3B%26atilde%3Bo%20para%20cart%26otilde%3Bes%20internacionais%20que%20n%26atilde%3Bo%20possuem%20parcelamento.%3C/p%3E%0A%0A%3Cp%3EN%26atilde%3Bo%20s%26atilde%3Bo%20aceitos%20cart%26otilde%3Bes%20de%20cr%26eacute%3Bdito%20empresariais%20ou%20corporativos.%3C/p%3E%0A%0A%3Cp%3EPara%20pagamento%20com%20PIX%2C%20basta%20utilizar%20o%20QR%20Code%20apresentado%20na%20tela%20final%20do%20processo%20de%20compra%20e%20realizar%20o%20pagamento.%20O%20prazo%20para%20efetuar%20a%20compra%20s%26atilde%3Bo%2010%20minutos%20ap%26oacute%3Bs%20a%20gera%26ccedil%3B%26atilde%3Bo%20do%20c%26oacute%3Bdigo%20para%20pagamento.%20Os%20ingressos%20estar%26atilde%3Bo%20garantidos%20e%20dispon%26iacute%3Bveis%20apenas%20ap%26oacute%3Bs%20a%20confirma%26ccedil%3B%26atilde%3Bo%20do%20pagamento.%20Para%20mais%20detalhes%20sobre%20transa%26ccedil%3B%26otilde%3Bes%20com%20PIX%20%3Ca%20href%3D%22https%3A//help.ticketmaster.com.br/hc/pt-br/sections/10520684009105-Pagamento-com-PIX%22%3Eclique%20aqui%3C/a%3E.%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%3Cstrong%3EClassifica%26ccedil%3B%26atilde%3Bo%20Et%26aacute%3Bria%3C/strong%3E%3C/p%3E%0A%0A%3Cp%3EA%20classifica%26ccedil%3B%26atilde%3Bo%20et%26aacute%3Bria%20do%20evento%20%26eacute%3B%2016%20%28dezesseis%29%20anos.%20A%20entrada%20de%20menores%20de%2016%20%28dezesseis%29%20anos%20ser%26aacute%3B%20permitida%20desde%20que%20estejam%20acompanhados%20dos%20pais%20ou%20respons%26aacute%3Bveis%20legais.%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%3Cstrong%3EIngressos%20para%20PcD%3C/strong%3E%3C/p%3E%0A%0A%3Cp%3EDurante%20o%20processo%20de%20compra%2C%20selecione%20seus%20ingressos%20de%20meia-entrada%2C%20clique%20em%20%26ldquo%3BContinuar%26rdquo%3B%20para%20ser%20redirecionado%20para%20a%20pr%26oacute%3Bxima%20etapa%20onde%20deve%20informar%20os%20tipos%20de%20meia-entrada%20que%20deseja.%20Ao%20escolher%20a%20categoria%20%26ldquo%3BPessoas%20com%20Defici%26ecirc%3Bncia%26rdquo%3B%2C%20voc%26ecirc%3B%20dever%26aacute%3B%20fornecer%20os%20dados%20do%20benefici%26aacute%3Brio%20e%20poder%26aacute%3B%20adicionar%20um%20ingresso%20para%20acompanhante%20+%20os%20dados%20desta%20pessoa.%3C/p%3E%0A%0A%3Cp%3EOs%20valores%20dos%20ingressos%20do%20tipo%20meia%20entrada%20ser%26atilde%3Bo%20apresentados%20e%20voc%26ecirc%3B%20poder%26aacute%3B%20avan%26ccedil%3Bar%20com%20a%20conclus%26atilde%3Bo%20do%20pagamento.%20%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3ERecomendamos%20que%20a%20compra%20dos%20ingressos%20para%20a%20Pessoa%20com%20Defici%26ecirc%3Bncia%20e%20seu%20acompanhante%20sejam%20realizados%20no%20mesmo%20momento%20e%20em%20mesmo%20pedido%2C%20garantindo%20que%20permane%26ccedil%3Bam%20juntos%20no%20setor%20durante%20toda%20a%20apresenta%26ccedil%3B%26atilde%3Bo.%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%3E%3Cstrong%3EOutras%20informa%26ccedil%3B%26otilde%3Bes%3C/strong%3E%3C/p%3E%0A%0A%3Cp%3E%3Cstrong%3EMais%20informa%26ccedil%3B%26otilde%3Bes%2C%20alvar%26aacute%3B%20e%20Termos%26amp%3BCondi%26ccedil%3B%26otilde%3Bes%20na%20%26iacute%3Bntegra%2C%20acesse%20%3Ca%20href%3D%22https%3A//rockinrio.com/rio/pt-br/termos-e-condicoes/%22%3Erockinrio.com/rio/pt-br/termos-e-condicoes/%3C/a%3E.%3C/strong%3E%3C/p%3E%0A%0A%3Cp%3ESe%20voc%26ecirc%3B%20precisar%20de%20informa%26ccedil%3B%26otilde%3Bes%20sobre%20meia-entrada%2C%20acesse%26nbsp%3B%3Ca%20href%3D%22https%3A//help.ticketmaster.com.br/hc/pt-br/categories/10492275749137-Meia-entrada-e-Crian%25C3%25A7as%22%3Ehttps%3A//help.ticketmaster.com.br/hc/pt-br/categories/10492275749137-Meia-entrada-e-Crian%25C3%25A7as%3C/a%3E%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%26nbsp%3B%26nbsp%3B%20%26nbsp%3B%3Cbr%20/%3E%0APara%20aux%26iacute%3Blio%20sobre%20perfil/cadastro%2C%20acesse%20%3Ca%20href%3D%22https%3A//help.ticketmaster.com.br/hc/pt-br/categories/10495161322513-Sobre-cadastros%22%3Ehttps%3A//help.ticketmaster.com.br/hc/pt-br/categories/10495161322513-Sobre-cadastros%3C/a%3E%3C/p%3E%0A%0A%3Cp%3E%3Cbr%20/%3E%0AAs%20informa%26ccedil%3B%26otilde%3Bes%20sobre%20o%20processo%20de%20compra%2C%20acesse%26nbsp%3B%3Ca%20href%3D%22https%3A//help.ticketmaster.com.br/hc/pt-br/categories/10495257925521-Processo-de-compra%22%3Ehttps%3A//help.ticketmaster.com.br/hc/pt-br/categories/10495257925521-Processo-de-compra%3C/a%3E%3C/p%3E%0A%0A%3Cp%3E%26nbsp%3B%3C/p%3E","venue":{"id":942,"name":"Cidade do Rock","description":"Av. Salvador Allende, 6500 - Barra da Tijuca, Rio de Janeiro - RJ, 22780-160","link":null,"logo":"","image":"","mapImage":"","address":{"street":"Av. Salvador Allende","streetNumber":"6500","streetType":null,"additionalInfo":null,"city":"rio de janeiro","province":"rio de janeiro","zipCode":"22780-160","latitude":-22.9758531,"longitude":-43.4058787,"formatReadableSimple":"Av. Salvador Allende 6500, rio de janeiro","country":{"key":"br","name":"BRASIL"}}},"wildcards":[],"link":"venda-rock-in-rio","description":"Rock In Rio","newEmailsEnabled":true,"optInText":"Deixe-nos mantê-lo informado sobre o que está por vir – incluindo pré-vendas e ofertas exclusivas – por meios eletrônicos (por exemplo, e-mail, ferramentas de mensageria, redes sociais, etc.). Você sempre pode alterar a forma como entramos em contato com você por meio de sua conta Ticketmaster.","thumbImage":"https://cdn.getcrowder.com/images/6ab2bf47-3bc3-4eb4-a87d-a67f05a18635-logo-640-x-640.jpg","currency":"BRL","disclaimer":"Declaro que li e ACEITO os  <a href=\"https://www.ticketmaster.com.br/static/termos-de-uso\"target=\"_blank\">Termos de Uso</a>, <a href=\"https://www.ticketmaster.com.br/static/politica-de-compra\"target=\"_blank\">Termos de Compra</a>, <a href=\"https://www.ticketmaster.com.br/static/politica-de-cookies\"target=\"_blank\">Política de Cookies</a> e <a href=\"https://www.ticketmaster.com.br/static/politica-de-privacidade\"target=\"_blank\">Política de Privacidade da Ticketmaster Brasil</a>. Em caso de constatação de fraude relacionada à aquisição do ingresso, especialmente se adquirido em canal não oficial ou se for utilizado algum benefício de meia-entrada que o adquirente não tiver direito, o mesmo poderá ser cancelado e não será permitida a entrada no evento por parte do cliente. Ao efetuar a compra do(s) seu(s) ingresso(s), você automaticamente concorda e aceita com os Termos e Condições/política de compras e Política de Privacidade da Ticketmaster Brasil e do organizador do evento, Rock World S.A, disponível em rockinrio.com. Declaro estar ciente de que a Rock World poderá enviar informações úteis sobre o evento, tais como comunicações acerca de transporte, line-up, horários, dados sobre o aplicativo oficial, itens permitidos e proibidos no evento, dentre outras – por meios eletrônicos (por exemplo, e-mail, ferramentas de mensageria, redes sociais, etc.). Mais informações sobre como a Ticketmaster Brasil e Rock World usam seus dados pessoais podem ser encontrados nos termos e políticas acima mencionados, que cumprem as disposições da legislação vigente.","channelId":21649,"limitByUserPerShow":{"quantity":4,"message":"Venda limitada a até 4 (quatro) ingressos por dia, por CPF, sendo, destes, até 1 meia-entrada."},"footerBannerMobile":null,"gatewaysByCountry":true,"alwaysShowDeliveryMethod":true,"requireBillingAddress":true,"featurePaymentVerificationMP":true,"marketing":{"pixelData":{"adWords":{"id":null,"label":null},"google":{"floodlight":{"configID":null,"activityGroupTagString":null,"activityTagString":null,"countingMethod":null},"gtm":{"id":null},"analytics":{"id":null}},"facebook":{"pixelId":null},"custom":{"conversion":null,"remarketing":null},"optin":{"enabled":true,"description":"A Rock World gostaria de mantê-lo informado sobre o que está por vir – incluindo pré-vendas e ofertas exclusivas – por meios eletrônicos (por exemplo, e-mail, ferramentas de mensageria, redes sociais, etc.). q Se mudar de ideia, você pode cancelar a inscrição a qualquer momento entrando em contato diretamente com a Rock World."}}},"insuranceProvider":{"itemName":"Ingresso Seguro","acceptSubtitle":"Com o seguro você receberá o reembolso em situações cobertas pela apólice.Veja as condições gerais, coberturas e regras.","declineSubtitle":"Em caso de emergências ou imprevistos de força maior*, entendo que não tenho direito a qualquer reembolso.","description":"<p style=\"margin-top:0cm; margin-right:0cm; margin-bottom:7.5pt; margin-left:0cm\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">Ao Contratar o produto &ldquo;Ingresso Seguro&rdquo;, comercializado pela </span></span></span></span>INGRESSO&nbsp;SEGURO&nbsp;LTDA<span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\"> atrav&eacute;s da Ticketmaster, voc&ecirc;:</span></span></span></span></p>\n\n<p style=\"margin-top:0cm; margin-right:0cm; margin-bottom:7.5pt; margin-left:0cm\">&nbsp;</p>\n\n<p style=\"margin-top:0cm; margin-right:0cm; margin-bottom:7.5pt; margin-left:0cm\"><b><u><span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">Privacidade de Dados</span></span></span></span></u></b></p>\n\n<p style=\"margin-top:0cm; margin-right:0cm; margin-bottom:7.5pt; margin-left:0cm\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">Concorda com a <a href=\"http://ingressoseguro.com/politicadeprivacidade/\">Pol&iacute;tica de Privacidade</a>&nbsp;e declara que leu e concordou que os dados pessoais por mim fornecidos, incluindo os dados pessoais sens&iacute;veis, ser&atilde;o tratados de acordo com a Pol&iacute;tica de Privacidade de Dados da </span></span></span></span>INGRESSO&nbsp;SEGURO&nbsp;LTDA<span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">. Al&eacute;m disso, tais dados poder&atilde;o ser compartilhados com empresas do grupo </span></span></span></span>INGRESSO&nbsp;SEGURO&nbsp;LTDA<span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\"> e terceiros, dentro e fora do Brasil, para, dentre outros, oferecimento de produtos e servi&ccedil;os.</span></span></span></span></p>\n\n<p style=\"margin-top:0cm; margin-right:0cm; margin-bottom:7.5pt; margin-left:0cm\">&nbsp;</p>\n\n<p style=\"margin-top:0cm; margin-right:0cm; margin-bottom:7.5pt; margin-left:0cm\"><b><u><span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">Termos e Condi&ccedil;&otilde;es do Produto</span></span></span></span></u></b></p>\n\n<p style=\"margin-top:0cm; margin-right:0cm; margin-bottom:7.5pt; margin-left:0cm\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">Concorda com todos os <a href=\"https://ingressoseguro.com/condicaogeral/\">Termos e Condi&ccedil;&otilde;es</a>, reconhecendo que em caso de utiliza&ccedil;&atilde;o do seguro, antes do evento, perderei o direito ao uso de todos os ingressos comprados pelo titular e, em caso de uso de qualquer ingresso da compra, o seguro estar&aacute; cancelado.</span></span></span></span></p>\n\n<p style=\"margin-top:0cm; margin-right:0cm; margin-bottom:7.5pt; margin-left:0cm\"><span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">Ainda, as disposi&ccedil;&otilde;es aqui referidas s&atilde;o uma breve descri&ccedil;&atilde;o do seguro, bem como as restri&ccedil;&otilde;es a ele aplicadas. O Produto est&aacute; registrado na SUSEP sob n&ordm; </span></span></span></span>15414.901206/2016-30<span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">&nbsp;sob responsabilidade da </span></span></span></span>AMERICAN&nbsp;LIFE&nbsp;COMPANHIA&nbsp;DE SEGUROS&nbsp;LTDA<span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">, CNPJ </span></span></span></span>67.865.360/0001-27<span style=\"font-size:10.5pt\"><span style=\"font-family:Averta\"><span style=\"color:#333333\"><span style=\"letter-spacing:.25pt\">. A &iacute;ntegra das Condi&ccedil;&otilde;es Gerais do Produto est&aacute; dispon&iacute;vel no site <a href=\"https://ingressoseguro.com/condicaogeral/\">https://ingressoseguro.com/condicaogeral/</a>. O registro do produto &eacute; autom&aacute;tico e n&atilde;o representa aprova&ccedil;&atilde;o ou recomenda&ccedil;&atilde;o por parte da Susep. As condi&ccedil;&otilde;es contratuais/ regulamento deste produto encontram-se registradas na SUSEP de acordo com o n&uacute;mero de processo constante na ap&oacute;lice/proposta e poder&atilde;o ser consultadas no endere&ccedil;o eletr&ocirc;nico <a href=\"http://www.susep.gov.br\">www.susep.gov.br</a> ou pelo Atendimento Exclusivo ao Consumidor 0800-021-8484 (dias &uacute;teis, das 9:30h &agrave;s 17:00h). A aceita&ccedil;&atilde;o da proposta sujeita &agrave; an&aacute;lise do risco, ap&oacute;s emitido o seguro, voc&ecirc; receber&aacute; por e-mail o certificado comprovando o inicio da cobertura.</span></span></span></span></p>","percentage":3.5},"salesStart":null,"salesStatus":"IN_SALE","category":null,"deliveryConfigurations":[{"id":28934,"type":"QUENTRO","name":"Ingresso Digital","description":"O ingresso do Rock in Rio 2024 é exclusivamente em formato digital! Para já, seu ingresso ainda é virtual e as informações da compra estarão sempre disponíveis na área Meus Pedidos. Mais adiante, informaremos todas as funcionalidades do seu novo ingresso.","hasCost":false}],"insuranceDescription":"%3Cp%20style%3D%22margin-top%3A0cm%3B%20margin-right%3A0cm%3B%20margin-bottom%3A7.5pt%3B%20margin-left%3A0cm%22%3E%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3EAo%20Contratar%20o%20produto%20%26ldquo%3BIngresso%20Seguro%26rdquo%3B%2C%20comercializado%20pela%20%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3EINGRESSO%26nbsp%3BSEGURO%26nbsp%3BLTDA%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3E%20atrav%26eacute%3Bs%20da%20Ticketmaster%2C%20voc%26ecirc%3B%3A%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3E%3C/p%3E%0A%0A%3Cp%20style%3D%22margin-top%3A0cm%3B%20margin-right%3A0cm%3B%20margin-bottom%3A7.5pt%3B%20margin-left%3A0cm%22%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%20style%3D%22margin-top%3A0cm%3B%20margin-right%3A0cm%3B%20margin-bottom%3A7.5pt%3B%20margin-left%3A0cm%22%3E%3Cb%3E%3Cu%3E%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3EPrivacidade%20de%20Dados%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3E%3C/u%3E%3C/b%3E%3C/p%3E%0A%0A%3Cp%20style%3D%22margin-top%3A0cm%3B%20margin-right%3A0cm%3B%20margin-bottom%3A7.5pt%3B%20margin-left%3A0cm%22%3E%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3EConcorda%20com%20a%20%3Ca%20href%3D%22http%3A//ingressoseguro.com/politicadeprivacidade/%22%3EPol%26iacute%3Btica%20de%20Privacidade%3C/a%3E%26nbsp%3Be%20declara%20que%20leu%20e%20concordou%20que%20os%20dados%20pessoais%20por%20mim%20fornecidos%2C%20incluindo%20os%20dados%20pessoais%20sens%26iacute%3Bveis%2C%20ser%26atilde%3Bo%20tratados%20de%20acordo%20com%20a%20Pol%26iacute%3Btica%20de%20Privacidade%20de%20Dados%20da%20%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3EINGRESSO%26nbsp%3BSEGURO%26nbsp%3BLTDA%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3E.%20Al%26eacute%3Bm%20disso%2C%20tais%20dados%20poder%26atilde%3Bo%20ser%20compartilhados%20com%20empresas%20do%20grupo%20%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3EINGRESSO%26nbsp%3BSEGURO%26nbsp%3BLTDA%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3E%20e%20terceiros%2C%20dentro%20e%20fora%20do%20Brasil%2C%20para%2C%20dentre%20outros%2C%20oferecimento%20de%20produtos%20e%20servi%26ccedil%3Bos.%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3E%3C/p%3E%0A%0A%3Cp%20style%3D%22margin-top%3A0cm%3B%20margin-right%3A0cm%3B%20margin-bottom%3A7.5pt%3B%20margin-left%3A0cm%22%3E%26nbsp%3B%3C/p%3E%0A%0A%3Cp%20style%3D%22margin-top%3A0cm%3B%20margin-right%3A0cm%3B%20margin-bottom%3A7.5pt%3B%20margin-left%3A0cm%22%3E%3Cb%3E%3Cu%3E%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3ETermos%20e%20Condi%26ccedil%3B%26otilde%3Bes%20do%20Produto%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3E%3C/u%3E%3C/b%3E%3C/p%3E%0A%0A%3Cp%20style%3D%22margin-top%3A0cm%3B%20margin-right%3A0cm%3B%20margin-bottom%3A7.5pt%3B%20margin-left%3A0cm%22%3E%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3EConcorda%20com%20todos%20os%20%3Ca%20href%3D%22https%3A//ingressoseguro.com/condicaogeral/%22%3ETermos%20e%20Condi%26ccedil%3B%26otilde%3Bes%3C/a%3E%2C%20reconhecendo%20que%20em%20caso%20de%20utiliza%26ccedil%3B%26atilde%3Bo%20do%20seguro%2C%20antes%20do%20evento%2C%20perderei%20o%20direito%20ao%20uso%20de%20todos%20os%20ingressos%20comprados%20pelo%20titular%20e%2C%20em%20caso%20de%20uso%20de%20qualquer%20ingresso%20da%20compra%2C%20o%20seguro%20estar%26aacute%3B%20cancelado.%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3E%3C/p%3E%0A%0A%3Cp%20style%3D%22margin-top%3A0cm%3B%20margin-right%3A0cm%3B%20margin-bottom%3A7.5pt%3B%20margin-left%3A0cm%22%3E%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3EAinda%2C%20as%20disposi%26ccedil%3B%26otilde%3Bes%20aqui%20referidas%20s%26atilde%3Bo%20uma%20breve%20descri%26ccedil%3B%26atilde%3Bo%20do%20seguro%2C%20bem%20como%20as%20restri%26ccedil%3B%26otilde%3Bes%20a%20ele%20aplicadas.%20O%20Produto%20est%26aacute%3B%20registrado%20na%20SUSEP%20sob%20n%26ordm%3B%20%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3E15414.901206/2016-30%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3E%26nbsp%3Bsob%20responsabilidade%20da%20%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3EAMERICAN%26nbsp%3BLIFE%26nbsp%3BCOMPANHIA%26nbsp%3BDE%20SEGUROS%26nbsp%3BLTDA%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3E%2C%20CNPJ%20%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3E67.865.360/0001-27%3Cspan%20style%3D%22font-size%3A10.5pt%22%3E%3Cspan%20style%3D%22font-family%3AAverta%22%3E%3Cspan%20style%3D%22color%3A%23333333%22%3E%3Cspan%20style%3D%22letter-spacing%3A.25pt%22%3E.%20A%20%26iacute%3Bntegra%20das%20Condi%26ccedil%3B%26otilde%3Bes%20Gerais%20do%20Produto%20est%26aacute%3B%20dispon%26iacute%3Bvel%20no%20site%20%3Ca%20href%3D%22https%3A//ingressoseguro.com/condicaogeral/%22%3Ehttps%3A//ingressoseguro.com/condicaogeral/%3C/a%3E.%20O%20registro%20do%20produto%20%26eacute%3B%20autom%26aacute%3Btico%20e%20n%26atilde%3Bo%20representa%20aprova%26ccedil%3B%26atilde%3Bo%20ou%20recomenda%26ccedil%3B%26atilde%3Bo%20por%20parte%20da%20Susep.%20As%20condi%26ccedil%3B%26otilde%3Bes%20contratuais/%20regulamento%20deste%20produto%20encontram-se%20registradas%20na%20SUSEP%20de%20acordo%20com%20o%20n%26uacute%3Bmero%20de%20processo%20constante%20na%20ap%26oacute%3Blice/proposta%20e%20poder%26atilde%3Bo%20ser%20consultadas%20no%20endere%26ccedil%3Bo%20eletr%26ocirc%3Bnico%20%3Ca%20href%3D%22http%3A//www.susep.gov.br%22%3Ewww.susep.gov.br%3C/a%3E%20ou%20pelo%20Atendimento%20Exclusivo%20ao%20Consumidor%200800-021-8484%20%28dias%20%26uacute%3Bteis%2C%20das%209%3A30h%20%26agrave%3Bs%2017%3A00h%29.%20A%20aceita%26ccedil%3B%26atilde%3Bo%20da%20proposta%20sujeita%20%26agrave%3B%20an%26aacute%3Blise%20do%20risco%2C%20ap%26oacute%3Bs%20emitido%20o%20seguro%2C%20voc%26ecirc%3B%20receber%26aacute%3B%20por%20e-mail%20o%20certificado%20comprovando%20o%20inicio%20da%20cobertura.%3C/span%3E%3C/span%3E%3C/span%3E%3C/span%3E%3C/p%3E","customRemarketingPixel":"null","customConversionPixel":"null","notStarted":false,"hasShows":true}}});
+				App.start();
+			})();
+		</script>
+
+		
+	</body>
+</html>
